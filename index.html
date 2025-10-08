@@ -1,3 +1,1305 @@
-Go to the google and search for google gemini student offer, and guyz u can get free google gemini for 1 year
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skills Assistant - Your Academic Success Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        :root {
+            --google-blue: #4285f4;
+            --google-red: #ea4335;
+            --google-yellow: #fbbc05;
+            --google-green: #34a853;
+            --google-gray-100: #f8f9fa;
+            --google-gray-200: #e8eaed;
+            --google-gray-300: #dadce0;
+            --google-gray-500: #5f6368;
+            --google-gray-700: #3c4043;
+            --google-gray-900: #202124;
+            --shadow-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+            --shadow-2: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+            --shadow-3: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+            --shadow-4: 0 2px 3px 0 rgba(60,64,67,0.3), 0 6px 10px 4px rgba(60,64,67,0.15);
+            --shadow-5: 0 4px 6px 0 rgba(60,64,67,0.3), 0 8px 12px 6px rgba(60,64,67,0.15);
+        }
 
-you can ask about scholarships, study, and so on things to boost your productivity and creativity 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--google-gray-900);
+            background-color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--google-gray-200);
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 22px;
+            color: var(--google-gray-700);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            background: linear-gradient(135deg, var(--google-blue), var(--google-red), var(--google-yellow), var(--google-green));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 24px;
+        }
+
+        nav ul li a {
+            color: var(--google-gray-700);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--google-gray-100);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 56px;
+            font-weight: 400;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--google-gray-500);
+            margin-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(52, 168, 83, 0.1));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) {
+            background-color: var(--google-blue);
+            animation-delay: 0s;
+        }
+
+        .floating-icon:nth-child(2) {
+            background-color: var(--google-red);
+            animation-delay: 0.5s;
+        }
+
+        .floating-icon:nth-child(3) {
+            background-color: var(--google-yellow);
+            animation-delay: 1s;
+        }
+
+        .floating-icon:nth-child(4) {
+            background-color: var(--google-green);
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Main Features Section */
+        .main-features {
+            padding: 80px 20px;
+            background-color: var(--google-gray-100);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--google-gray-500);
+            margin-bottom: 60px;
+            font-size: 18px;
+        }
+
+        .feature-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: white;
+            border: 1px solid var(--google-gray-300);
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--google-gray-700);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--google-gray-100);
+        }
+
+        .tab-btn.active {
+            background-color: var(--google-blue);
+            color: white;
+            border-color: var(--google-blue);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .feature-detail {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-2);
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon-large {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        .feature-info h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .feature-info p {
+            color: var(--google-gray-500);
+            font-size: 16px;
+        }
+
+        .feature-description {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .feature-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--google-gray-100);
+            color: var(--google-gray-700);
+            flex-shrink: 0;
+        }
+
+        .feature-item-content h4 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .feature-item-content p {
+            color: var(--google-gray-500);
+            font-size: 14px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 20px;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: var(--google-gray-500);
+            font-size: 14px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 20px;
+            background-color: var(--google-gray-100);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-3);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            color: var(--google-gray-500);
+            font-size: 14px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--google-gray-200);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-2);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: var(--google-gray-100);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            color: var(--google-gray-500);
+            font-size: 14px;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--google-blue), var(--google-green));
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-family: 'Google Sans', sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-card .material-icons {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--google-gray-100);
+            border-top: 1px solid var(--google-gray-200);
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .footer-column h4 {
+            font-family: 'Google Sans', sans-serif;
+            font-weight: 500;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: var(--google-gray-700);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--google-gray-500);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--google-gray-700);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--google-gray-200);
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: var(--google-gray-500);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--google-gray-500);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--google-gray-700);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .feature-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--google-blue), var(--google-green));
+            width: 0;
+            z-index: 1000;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Bar -->
+    <div class="loading-bar" id="loadingBar"></div>
+
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-icon">AI</div>
+            <span>Skills Assistant</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Transform Your Academic Journey with AI</h1>
+        <p>Discover how artificial intelligence can revolutionize the way you learn, solve problems, and plan your future. Our AI assistants are designed to support you every step of the way.</p>
+        
+        <div class="hero-image">
+            <div class="hero-image-content">
+                <div class="floating-icon">
+                    <span class="material-icons">psychology</span>
+                </div>
+                <div class="floating-icon">
+                    <span class="material-icons">school</span>
+                </div>
+                <div class="floating-icon">
+                    <span class="material-icons">menu_book</span>
+                </div>
+                <div class="floating-icon">
+                    <span class="material-icons">trending_up</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Features Section -->
+    <section class="main-features" id="features">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Learning Tools</h2>
+            <p class="section-subtitle">Explore our suite of intelligent assistants designed to enhance your academic experience</p>
+            
+            <div class="feature-tabs">
+                <button class="tab-btn active" onclick="showTab('problem-solver')">
+                    <span class="material-icons">psychology</span>
+                    Problem Solver
+                </button>
+                <button class="tab-btn" onclick="showTab('scholarship')">
+                    <span class="material-icons">school</span>
+                    Scholarship Finder
+                </button>
+                <button class="tab-btn" onclick="showTab('study-coach')">
+                    <span class="material-icons">menu_book</span>
+                    Study Coach
+                </button>
+                <button class="tab-btn" onclick="showTab('career')">
+                    <span class="material-icons">trending_up</span>
+                    Career Navigator
+                </button>
+            </div>
+
+            <!-- Problem Solver Tab -->
+            <div id="problem-solver" class="tab-content active">
+                <div class="feature-detail">
+                    <div class="feature-header">
+                        <div class="feature-icon-large" style="background-color: var(--google-blue);">
+                            <span class="material-icons">psychology</span>
+                        </div>
+                        <div class="feature-info">
+                            <h3>AI Problem Solver</h3>
+                            <p>Get instant, step-by-step solutions to complex academic problems</p>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">calculate</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Mathematics & Sciences</h4>
+                                <p>Solve equations, understand concepts, and get detailed explanations for STEM subjects</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">code</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Programming Help</h4>
+                                <p>Debug code, understand algorithms, and learn best practices in software development</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">edit</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Writing & Research</h4>
+                                <p>Improve essays, structure arguments, and find credible sources for assignments</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">lightbulb</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Critical Thinking</h4>
+                                <p>Develop analytical skills and approach problems from multiple perspectives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scholarship Finder Tab -->
+            <div id="scholarship" class="tab-content">
+                <div class="feature-detail">
+                    <div class="feature-header">
+                        <div class="feature-icon-large" style="background-color: var(--google-red);">
+                            <span class="material-icons">school</span>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Scholarship Finder</h3>
+                            <p>Discover personalized funding opportunities for your education</p>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">search</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Smart Matching</h4>
+                                <p>AI analyzes your profile to find scholarships that match your achievements and needs</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">description</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Application Guidance</h4>
+                                <p>Get help crafting compelling essays and preparing strong applications</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">event</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Deadline Tracking</h4>
+                                <p>Never miss an opportunity with intelligent deadline reminders and alerts</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">insights</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Success Analytics</h4>
+                                <p>Track your application progress and optimize your scholarship strategy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Coach Tab -->
+            <div id="study-coach" class="tab-content">
+                <div class="feature-detail">
+                    <div class="feature-header">
+                        <div class="feature-icon-large" style="background-color: var(--google-yellow);">
+                            <span class="material-icons">menu_book</span>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Study Coach</h3>
+                            <p>Master effective learning techniques tailored to your style</p>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">schedule</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Personalized Schedules</h4>
+                                <p>Create optimal study timetables based on your energy levels and commitments</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">memory</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Memory Techniques</h4>
+                                <p>Learn proven methods for better retention and recall of information</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">assessment</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Progress Tracking</h4>
+                                <p>Monitor your learning progress and identify areas for improvement</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">psychology_alt</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Learning Style Analysis</h4>
+                                <p>Discover your optimal learning style and adapt study methods accordingly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Navigator Tab -->
+            <div id="career" class="tab-content">
+                <div class="feature-detail">
+                    <div class="feature-header">
+                        <div class="feature-icon-large" style="background-color: var(--google-green);">
+                            <span class="material-icons">trending_up</span>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Career Navigator</h3>
+                            <p>Plan your professional journey with AI-powered guidance</p>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">explore</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Career Discovery</h4>
+                                <p>Explore career paths that align with your skills, interests, and values</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">route</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Skill Roadmap</h4>
+                                <p>Get personalized recommendations for skills to develop for your target career</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">work</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Interview Preparation</h4>
+                                <p>Practice with AI mock interviews and get feedback on your performance</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-item-icon">
+                                <span class="material-icons">connect_without_contact</span>
+                            </div>
+                            <div class="feature-item-content">
+                                <h4>Networking Strategies</h4>
+                                <p>Learn effective ways to build professional connections in your field</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How AI Skills Assistant Works</h2>
+            <p class="section-subtitle">Simple steps to unlock your academic potential</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Identify Your Need</h3>
+                    <p>Choose the AI assistant that matches your current academic challenge or goal</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Provide Context</h3>
+                    <p>Share relevant information about your situation, goals, or specific problem</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Receive AI Guidance</h3>
+                    <p>Get personalized, actionable advice and solutions tailored to your needs</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Implement & Succeed</h3>
+                    <p>Apply the recommendations and track your progress towards academic excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Students Choose AI Skills Assistant</h2>
+            <p class="section-subtitle">Experience the difference AI can make in your academic journey</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background-color: var(--google-blue);">
+                        <span class="material-icons">access_time</span>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Get help whenever you need it, day or night. No waiting for office hours or appointments.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background-color: var(--google-red);">
+                        <span class="material-icons">person</span>
+                    </div>
+                    <h3>Personalized Learning</h3>
+                    <p>AI adapts to your learning style and pace, providing customized guidance for optimal results.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background-color: var(--google-yellow);">
+                        <span class="material-icons">speed</span>
+                    </div>
+                    <h3>Instant Results</h3>
+                    <p>Receive immediate feedback and solutions, accelerating your learning and problem-solving process.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background-color: var(--google-green);">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3>Proven Success</h3>
+                    <p>Join thousands of students who have improved their grades and achieved their academic goals.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background-color: var(--google-blue);">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>Your data is secure and private. We prioritize protecting your academic information.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon" style="background-color: var(--google-red);">
+                        <span class="material-icons">auto_awesome</span>
+                    </div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Our AI constantly learns and evolves to provide better, more accurate assistance over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about AI Skills Assistant</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How does AI Skills Assistant understand my academic needs?
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        Our AI uses advanced natural language processing to understand your questions and context. It analyzes your input, identifies the core problem or need, and draws from a vast knowledge base to provide relevant, accurate assistance tailored to your specific situation.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Is the AI assistance reliable for academic work?
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, our AI is trained on verified academic resources and follows educational best practices. However, we always recommend using AI assistance as a learning tool to supplement your own understanding and critical thinking, not as a replacement for your own work.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can AI Skills Assistant help with specific subjects?
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! Our AI covers a wide range of subjects including mathematics, sciences, programming, humanities, languages, and more. Each specialized assistant is fine-tuned to provide expert-level guidance in its domain.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How is my privacy protected?
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        We take privacy seriously. All conversations are encrypted, and your personal information is never shared with third parties. You can delete your history at any time, and we comply with all major data protection regulations.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What makes AI Skills Assistant different from other AI tools?
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        Unlike general AI tools, our assistants are specifically designed for academic success. They understand educational contexts, follow pedagogical principles, and provide structured learning guidance that helps you not just get answers, but truly understand concepts.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Academic Journey?</h2>
+            <p>Join thousands of students who are already excelling with AI-powered assistance</p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <span class="material-icons">school</span>
+                    <h3>10,000+</h3>
+                    <p>Students Helped</p>
+                </div>
+                <div class="info-card">
+                    <span class="material-icons">star</span>
+                    <h3>4.9/5</h3>
+                    <p>User Rating</p>
+                </div>
+                <div class="info-card">
+                    <span class="material-icons">emoji_events</span>
+                    <h3>500+</h3>
+                    <p>Scholarships Won</p>
+                </div>
+                <div class="info-card">
+                    <span class="material-icons">trending_up</span>
+                    <h3>85%</h3>
+                    <p>Grade Improvement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Study Tips</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AI Skills Assistant. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading Bar Animation
+        window.addEventListener('load', () => {
+            const loadingBar = document.getElementById('loadingBar');
+            loadingBar.style.width = '100%';
+            setTimeout(() => {
+                loadingBar.style.opacity = '0';
+                setTimeout(() => {
+                    loadingBar.style.width = '0';
+                    loadingBar.style.opacity = '1';
+                }, 300);
+            }, 500);
+        });
+
+        // Tab Functionality
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.closest('.tab-btn').classList.add('active');
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply initial styles and observe elements
+        document.querySelectorAll('.benefit-card, .step, .faq-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(element);
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = 'var(--shadow-2)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            // Press 'Escape' to close all FAQ items
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString() + (element.textContent.includes('+') ? '+' : '');
+            }, 20);
+        }
+
+        // Trigger counter animation when CTA section is visible
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.info-card h3');
+                    counters.forEach(counter => {
+                        const text = counter.textContent;
+                        const number = parseInt(text.replace(/\D/g, ''));
+                        if (!isNaN(number)) {
+                            animateCounter(counter, number);
+                        }
+                    });
+                    ctaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const ctaSection = document.querySelector('.cta');
+        if (ctaSection) {
+            ctaObserver.observe(ctaSection);
+        }
+    </script>
+</body>
+</html>
