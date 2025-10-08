@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Celebration</title>
+    <title>AI Skills House - Ambassador Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+        :root {
+            --primary: #4285f4;
+            --primary-light: #8ab4f8;
+            --primary-dark: #1a73e8;
+            --secondary: #34a853;
+            --tertiary: #fbbc05;
+            --quaternary: #ea4335;
+            --dark: #202124;
+            --dark-secondary: #5f6368;
+            --light: #ffffff;
+            --gray: #f8f9fa;
+            --gray-light: #e8eaed;
+            --shadow-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+            --shadow-2: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+            --shadow-3: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+            --shadow-4: 0 2px 3px 0 rgba(60,64,67,0.3), 0 6px 10px 4px rgba(60,64,67,0.15);
+            --shadow-5: 0 4px 6px 0 rgba(60,64,67,0.3), 0 8px 14px 6px rgba(60,64,67,0.15);
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,565 +34,1026 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #0a0e27 0%, #1a237e 50%, #283593 100%);
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
+            font-family: 'Google Sans', 'Roboto', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.5;
+            overflow-x: hidden;
         }
 
-        .stars {
+        /* Header */
+        header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            pointer-events: none;
+            background-color: var(--light);
+            box-shadow: var(--shadow-1);
+            z-index: 1000;
+            transition: var(--transition);
         }
 
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--dark);
+            text-decoration: none;
         }
 
-        .birthday-message {
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            z-index: 10;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .birthday-message h1 {
-            font-size: 4rem;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: rainbow 5s infinite;
-        }
-
-        @keyframes rainbow {
-            0%, 100% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(180deg); }
-        }
-
-        .birthday-message p {
-            font-size: 1.5rem;
-            color: #fff;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
-            to { opacity: 1; transform: translateX(-50%) translateY(0); }
-        }
-
-        .balloon-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .balloon {
-            position: absolute;
-            width: 80px;
-            height: 100px;
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            opacity: 0.9;
-            animation: float 8s infinite ease-in-out;
-        }
-
-        .balloon::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 100px;
-            background: rgba(0, 0, 0, 0.2);
-            left: 50%;
-            bottom: -100px;
-            transform: translateX(-50%);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(-5deg); }
-            33% { transform: translateY(-20px) rotate(5deg); }
-            66% { transform: translateY(-10px) rotate(-3deg); }
-        }
-
-        .balloon:nth-child(1) {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
-            left: 10%;
-            animation-duration: 7s;
-            animation-delay: 0s;
-        }
-
-        .balloon:nth-child(2) {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            left: 20%;
-            animation-duration: 8s;
-            animation-delay: 1s;
-        }
-
-        .balloon:nth-child(3) {
-            background: linear-gradient(135deg, #f7b731, #e17055);
-            left: 35%;
-            animation-duration: 9s;
-            animation-delay: 0.5s;
-        }
-
-        .balloon:nth-child(4) {
-            background: linear-gradient(135deg, #5f27cd, #00d2d3);
-            left: 50%;
-            animation-duration: 7.5s;
-            animation-delay: 1.5s;
-        }
-
-        .balloon:nth-child(5) {
-            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
-            left: 65%;
-            animation-duration: 8.5s;
-            animation-delay: 0.7s;
-        }
-
-        .balloon:nth-child(6) {
-            background: linear-gradient(135deg, #fd79a8, #fdcb6e);
-            left: 80%;
-            animation-duration: 7.2s;
-            animation-delay: 1.2s;
-        }
-
-        .confetti-container {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: #f00;
-            animation: confetti-fall 3s linear infinite;
-        }
-
-        @keyframes confetti-fall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh) rotate(720deg);
-                opacity: 0;
-            }
-        }
-
-        .firework {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
-            animation: firework-launch 1.5s ease-out forwards;
-        }
-
-        @keyframes firework-launch {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-300px);
-                opacity: 0;
-            }
-        }
-
-        .firework-explosion {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            animation: explode 1s ease-out forwards;
-        }
-
-        @keyframes explode {
-            0% {
-                transform: translate(0, 0);
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .wish-button {
-            position: absolute;
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 40px;
-            font-size: 1.5rem;
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
             font-weight: bold;
-            color: #fff;
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            z-index: 20;
-            animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.05); }
+        nav {
+            display: flex;
+            align-items: center;
         }
 
-        .wish-button:hover {
-            transform: translateX(-50%) scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(45deg, #ff5252, #ffeb3b);
+        .nav-menu {
+            display: flex;
+            list-style: none;
         }
 
-        .wish-button:active {
-            transform: translateX(-50%) scale(0.95);
+        .nav-item {
+            margin: 0 16px;
         }
 
-        .cake {
-            position: absolute;
-            bottom: 25%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 150px;
-            z-index: 5;
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-secondary);
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
         }
 
-        .cake-layer {
-            position: absolute;
-            width: 100%;
-            height: 50px;
-            background: linear-gradient(to bottom, #8b4513, #d2691e);
-            border-radius: 5px;
+        .nav-link:hover {
+            color: var(--primary);
         }
 
-        .cake-layer:nth-child(1) {
-            bottom: 0;
-            height: 60px;
-            background: linear-gradient(to bottom, #d2691e, #8b4513);
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .cake-layer:nth-child(2) {
-            bottom: 50px;
-            width: 90%;
-            left: 5%;
-            background: linear-gradient(to bottom, #ff69b4, #ff1493);
-        }
-
-        .cake-layer:nth-child(3) {
-            bottom: 90px;
-            width: 80%;
-            left: 10%;
-            background: linear-gradient(to bottom, #fff, #f0f0f0);
-        }
-
-        .candle {
-            position: absolute;
-            width: 10px;
-            height: 30px;
-            background: linear-gradient(to bottom, #ffeb3b, #ffc107);
-            bottom: 130px;
-            border-radius: 2px;
-        }
-
-        .candle:nth-child(4) { left: 30%; }
-        .candle:nth-child(5) { left: 45%; }
-        .candle:nth-child(6) { left: 60%; }
-
-        .flame {
-            position: absolute;
-            width: 15px;
-            height: 20px;
-            background: radial-gradient(circle, #ffeb3b, #ff9800);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            top: -15px;
-            left: -2.5px;
-            animation: flicker 0.5s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% { transform: scale(1) rotate(-2deg); }
-            100% { transform: scale(1.1) rotate(2deg); }
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: white;
+        .header-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            animation: sparkle 1.5s linear infinite;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark-secondary);
+            transition: var(--transition);
         }
 
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
+        .header-btn:hover {
+            background-color: var(--gray);
         }
 
+        .sign-in-btn {
+            padding: 8px 24px;
+            background: none;
+            border: 1px solid var(--gray-light);
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sign-in-btn:hover {
+            box-shadow: var(--shadow-1);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 24px 60px;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 400;
+            margin-bottom: 24px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--dark-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--light);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: var(--shadow-2);
+        }
+
+        .btn-secondary {
+            background-color: var(--light);
+            color: var(--primary);
+            border: 1px solid var(--gray-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--gray);
+            box-shadow: var(--shadow-1);
+        }
+
+        .btn-icon {
+            margin-left: 8px;
+        }
+
+        /* Program Section */
+        .program {
+            padding: 80px 24px;
+            background-color: var(--gray);
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--dark-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .program-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: var(--shadow-1);
+            transition: var(--transition);
+        }
+
+        .program-card:hover {
+            box-shadow: var(--shadow-3);
+        }
+
+        .program-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: var(--primary);
+            font-size: 32px;
+        }
+
+        .program-title {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .program-description {
+            font-size: 16px;
+            color: var(--dark-secondary);
+            line-height: 1.5;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 24px;
+            background-color: var(--light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            color: var(--secondary);
+            margin-right: 16px;
+            margin-top: 2px;
+        }
+
+        .benefit-text {
+            font-size: 16px;
+            color: var(--dark);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 80px 24px;
+            background-color: var(--gray);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: var(--shadow-1);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 8px 0 12px;
+            color: var(--dark);
+        }
+
+        .step-description {
+            font-size: 16px;
+            color: var(--dark-secondary);
+            line-height: 1.5;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 24px;
+            background-color: var(--light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background-color: var(--gray);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: var(--shadow-1);
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            color: var(--dark-secondary);
+            line-height: 1.5;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            margin-right: 16px;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .author-role {
+            font-size: 14px;
+            color: var(--dark-secondary);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 24px;
+            background-color: var(--gray);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--light);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--gray);
+        }
+
+        .faq-question-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .faq-icon {
+            color: var(--dark-secondary);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            font-size: 16px;
+            color: var(--dark-secondary);
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 24px;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .cta-description {
+            font-size: 18px;
+            color: var(--dark-secondary);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--gray);
+            padding: 40px 24px;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: 12px;
+        }
+
+        .footer-link a {
+            color: var(--dark-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footer-link a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 14px;
+            color: var(--dark-secondary);
+        }
+
+        .footer-language {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: var(--dark-secondary);
+        }
+
+        .footer-language select {
+            background: none;
+            border: none;
+            margin-left: 8px;
+            font-size: 14px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            .birthday-message h1 {
-                font-size: 2.5rem;
+            .nav-menu {
+                display: none;
             }
-            
-            .birthday-message p {
-                font-size: 1.2rem;
+
+            .mobile-menu-toggle {
+                display: block;
             }
-            
-            .wish-button {
-                font-size: 1.2rem;
-                padding: 12px 30px;
+
+            .hero-title {
+                font-size: 36px;
             }
-            
-            .cake {
-                width: 150px;
-                height: 120px;
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .cta-title {
+                font-size: 28px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 16px;
+            }
+
+            .hero {
+                padding: 100px 16px 40px;
+            }
+
+            .section-container {
+                padding: 0 16px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .cta-title {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="stars" id="stars"></div>
-    
-    <div class="birthday-message">
-        <h1>Happy Birthday!</h1>
-        <p>May all your wishes come true!</p>
-    </div>
-    
-    <div class="balloon-container" id="balloonContainer"></div>
-    
-    <div class="confetti-container" id="confettiContainer"></div>
-    
-    <div class="cake">
-        <div class="cake-layer"></div>
-        <div class="cake-layer"></div>
-        <div class="cake-layer"></div>
-        <div class="candle">
-            <div class="flame"></div>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">AI</div>
+                <span>Skills House</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#program" class="nav-link">Program</a></li>
+                    <li class="nav-item"><a href="#benefits" class="nav-link">Benefits</a></li>
+                    <li class="nav-item"><a href="#process" class="nav-link">Process</a></li>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="header-btn">
+                        <span class="material-icons">apps</span>
+                    </button>
+                    <button class="sign-in-btn">Sign in</button>
+                    <button class="mobile-menu-toggle">
+                        <span class="material-icons">menu</span>
+                    </button>
+                </div>
+            </nav>
         </div>
-        <div class="candle">
-            <div class="flame"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">AI Skills Ambassador Program</h1>
+            <p class="hero-subtitle">Join our community of passionate individuals dedicated to spreading AI knowledge and skills worldwide</p>
+            <div class="hero-buttons">
+                <a href="https://aiskillshouse.com/student/qr-mediator.html?uid=1766&promptId=16" target="_blank" class="btn btn-primary">
+                    Are you a student ambassador?
+                    <span class="material-icons btn-icon">arrow_forward</span>
+                </a>
+                <a href="https://aiskillshouse.com/ambassador-program" target="_blank" class="btn btn-secondary">
+                    Learn more
+                    <span class="material-icons btn-icon">arrow_forward</span>
+                </a>
+            </div>
         </div>
-        <div class="candle">
-            <div class="flame"></div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program" id="program">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">What is the Ambassador Program?</h2>
+                <p class="section-subtitle">Discover how you can make a difference in the AI community</p>
+            </div>
+            <div class="program-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <h3 class="program-title">Learn & Grow</h3>
+                    <p class="program-description">Access exclusive AI training materials and develop your skills through hands-on projects and mentorship.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3 class="program-title">Build Community</h3>
+                    <p class="program-description">Connect with a global network of AI enthusiasts, professionals, and experts from around the world.</p>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <span class="material-icons">record_voice_over</span>
+                    </div>
+                    <h3 class="program-title">Share Knowledge</h3>
+                    <p class="program-description">Lead workshops, create content, and help others learn about artificial intelligence and its applications.</p>
+                </div>
+            </div>
         </div>
-    </div>
-    
-    <button class="wish-button" id="wishButton">Wish Me Birthday</button>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Ambassador Benefits</h2>
+                <p class="section-subtitle">What you'll gain as an AI Skills Ambassador</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="material-icons benefit-icon">check_circle</span>
+                    <span class="benefit-text">Access to exclusive AI courses and resources</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="material-icons benefit-icon">check_circle</span>
+                    <span class="benefit-text">Direct mentorship from industry experts</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="material-icons benefit-icon">check_circle</span>
+                    <span class="benefit-text">Opportunities to host workshops and events</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="material-icons benefit-icon">check_circle</span>
+                    <span class="benefit-text">Certificate of completion and ambassador badge</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="material-icons benefit-icon">check_circle</span>
+                    <span class="benefit-text">Networking with AI professionals worldwide</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="material-icons benefit-icon">check_circle</span>
+                    <span class="benefit-text">Career advancement opportunities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Application Process</h2>
+                <p class="section-subtitle">How to become an AI Skills Ambassador</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Submit Application</h3>
+                    <p class="step-description">Fill out the online application form with your personal information and background.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Complete Assessment</h3>
+                    <p class="step-description">Take a short assessment to evaluate your understanding of basic AI concepts.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Virtual Interview</h3>
+                    <p class="step-description">Participate in a brief virtual interview with our team to discuss your goals.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Onboarding & Training</h3>
+                    <p class="step-description">Complete our onboarding process and attend mandatory training sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Ambassadors Say</h2>
+                <p class="section-subtitle">Hear from current and former AI Skills Ambassadors</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Becoming an AI Skills Ambassador has been one of the most rewarding experiences of my life. I've not only deepened my own understanding of AI but also helped hundreds of others begin their AI journey."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Johnson</div>
+                            <div class="author-role">AI Researcher, Ambassador since 2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The program provided me with invaluable resources and connections that have significantly advanced my career. I've made lifelong friends and professional contacts through this community."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <div class="author-name">Michael Chen</div>
+                            <div class="author-role">Data Scientist, Ambassador since 2021</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As someone new to AI, the ambassador program gave me the confidence and knowledge to lead workshops and speak at events. It's been transformative for both my skills and my career."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AP</div>
+                        <div class="author-info">
+                            <div class="author-name">Alex Patel</div>
+                            <div class="author-role">Software Developer, Ambassador since 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about the Ambassador Program</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How long is the Ambassador Program?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The initial commitment is for 6 months, after which you can choose to continue based on your performance and interest. Many ambassadors stay with the program for multiple years.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Is the program paid?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            While the program itself is volunteer-based, ambassadors may receive stipends for hosting specific workshops or events. Additionally, you'll receive free access to premium courses and resources.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Do I need technical expertise to apply?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No, you don't need to be an AI expert! We welcome individuals at all skill levels, from beginners to advanced practitioners. What's most important is your passion for AI and your enthusiasm for sharing knowledge.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">What kind of support will I receive as an ambassador?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You'll receive comprehensive training, access to exclusive resources, mentorship from industry experts, and ongoing support from our team. We also provide materials for workshops and events.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Can I apply if I'm a student?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! We encourage students to apply. The program can be a great way to build your resume, gain practical experience, and make valuable connections in the AI industry.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="section-container">
+            <h2 class="cta-title">Ready to Join Our Ambassador Community?</h2>
+            <p class="cta-description">Take the first step toward becoming an AI Skills Ambassador and help shape the future of AI education</p>
+            <div class="cta-buttons">
+                <a href="https://aiskillshouse.com/student/qr-mediator.html?uid=1766&promptId=16" target="_blank" class="btn btn-primary">
+                    Are you a student ambassador?
+                    <span class="material-icons btn-icon">arrow_forward</span>
+                </a>
+                <a href="https://aiskillshouse.com/ambassador-program" target="_blank" class="btn btn-secondary">
+                    Learn more
+                    <span class="material-icons btn-icon">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">AI Skills House</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">About</a></li>
+                    <li class="footer-link"><a href="#">Programs</a></li>
+                    <li class="footer-link"><a href="#">Events</a></li>
+                    <li class="footer-link"><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Resources</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">AI Courses</a></li>
+                    <li class="footer-link"><a href="#">Workshop Materials</a></li>
+                    <li class="footer-link"><a href="#">Community Forum</a></li>
+                    <li class="footer-link"><a href="#">Success Stories</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Support</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">Help Center</a></li>
+                    <li class="footer-link"><a href="#">Contact Us</a></li>
+                    <li class="footer-link"><a href="#">Privacy Policy</a></li>
+                    <li class="footer-link"><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Connect</h3>
+                <ul class="footer-links">
+                    <li class="footer-link"><a href="#">Facebook</a></li>
+                    <li class="footer-link"><a href="#">Twitter</a></li>
+                    <li class="footer-link"><a href="#">LinkedIn</a></li>
+                    <li class="footer-link"><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © 2023 AI Skills House. All rights reserved.
+            </div>
+            <div class="footer-language">
+                <span>Language:</span>
+                <select>
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                </select>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Create stars
-        function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const starCount = 100;
-            
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.animationDelay = `${Math.random() * 3}s`;
-                starsContainer.appendChild(star);
-            }
-        }
-        
-        // Create balloons
-        function createBalloons() {
-            const balloonContainer = document.getElementById('balloonContainer');
-            const balloonCount = 6;
-            
-            for (let i = 0; i < balloonCount; i++) {
-                const balloon = document.createElement('div');
-                balloon.className = 'balloon';
-                balloon.style.bottom = '-120px';
-                balloon.style.left = `${10 + i * 15}%`;
-                balloon.style.animationDelay = `${i * 0.5}s`;
-                balloonContainer.appendChild(balloon);
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
                 
-                // Animate balloons floating up
-                animateBalloon(balloon);
-            }
-        }
-        
-        function animateBalloon(balloon) {
-            let position = -120;
-            const speed = 0.5 + Math.random() * 0.5;
-            const wobble = Math.random() * 20 - 10;
-            
-            function moveBalloon() {
-                position += speed;
-                balloon.style.bottom = `${position}px`;
-                balloon.style.transform = `translateX(${Math.sin(position / 50) * wobble}px)`;
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
                 
-                if (position < window.innerHeight + 120) {
-                    requestAnimationFrame(moveBalloon);
-                } else {
-                    // Reset balloon position when it goes off screen
-                    position = -120;
-                    requestAnimationFrame(moveBalloon);
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
                 }
-            }
-            
-            requestAnimationFrame(moveBalloon);
-        }
-        
-        // Create confetti
-        function createConfetti() {
-            const confettiContainer = document.getElementById('confettiContainer');
-            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd'];
-            
-            setInterval(() => {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = `${Math.random() * 100}%`;
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.animationDuration = `${2 + Math.random() * 3}s`;
-                confetti.style.opacity = Math.random();
-                confettiContainer.appendChild(confetti);
-                
-                // Remove confetti after animation
-                setTimeout(() => {
-                    confetti.remove();
-                }, 5000);
-            }, 100);
-        }
-        
-        // Create fireworks
-        function createFirework(x, y) {
-            const firework = document.createElement('div');
-            firework.className = 'firework';
-            firework.style.left = `${x}px`;
-            firework.style.bottom = '0';
-            firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            document.body.appendChild(firework);
-            
-            // Create explosion after launch
-            setTimeout(() => {
-                firework.remove();
-                createExplosion(x, y);
-            }, 1500);
-        }
-        
-        function createExplosion(x, y) {
-            const particleCount = 30;
-            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd'];
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'firework-explosion';
-                particle.style.left = `${x}px`;
-                particle.style.bottom = `${y}px`;
-                particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                
-                const angle = (Math.PI * 2 * i) / particleCount;
-                const velocity = 2 + Math.random() * 3;
-                const vx = Math.cos(angle) * velocity;
-                const vy = Math.sin(angle) * velocity;
-                
-                document.body.appendChild(particle);
-                
-                let posX = 0;
-                let posY = 0;
-                let opacity = 1;
-                
-                function animateParticle() {
-                    posX += vx;
-                    posY += vy;
-                    opacity -= 0.02;
-                    
-                    particle.style.transform = `translate(${posX}px, ${posY}px)`;
-                    particle.style.opacity = opacity;
-                    
-                    if (opacity > 0) {
-                        requestAnimationFrame(animateParticle);
-                    } else {
-                        particle.remove();
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
                     }
                 }
-                
-                requestAnimationFrame(animateParticle);
-            }
-        }
-        
-        // Create random fireworks
-        function createRandomFireworks() {
-            setInterval(() => {
-                const x = Math.random() * window.innerWidth;
-                const y = 200 + Math.random() * 200;
-                createFirework(x, y);
-            }, 2000);
-        }
-        
-        // Create sparkles around candles
-        function createSparkles() {
-            const candles = document.querySelectorAll('.candle');
-            
-            candles.forEach(candle => {
-                setInterval(() => {
-                    const sparkle = document.createElement('div');
-                    sparkle.className = 'sparkle';
-                    sparkle.style.left = `${Math.random() * 10 - 5}px`;
-                    sparkle.style.top = `${Math.random() * 10 - 5}px`;
-                    candle.appendChild(sparkle);
-                    
-                    setTimeout(() => {
-                        sparkle.remove();
-                    }, 1500);
-                }, 500);
             });
-        }
-        
-        // Handle wish button click
-        document.getElementById('wishButton').addEventListener('click', function() {
-            // Create extra celebration effect
-            for (let i = 0; i < 5; i++) {
-                setTimeout(() => {
-                    const x = Math.random() * window.innerWidth;
-                    const y = 200 + Math.random() * 200;
-                    createFirework(x, y);
-                }, i * 200);
-            }
-            
-            // Open the link after a short delay
-            setTimeout(() => {
-                window.open('https://aiskillshouse.com/student/qr-mediator.html?uid=1766&promptId=15', '_blank');
-            }, 1000);
         });
-        
-        // Initialize all animations
-        window.addEventListener('load', () => {
-            createStars();
-            createBalloons();
-            createConfetti();
-            createRandomFireworks();
-            createSparkles();
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = 'var(--shadow-2)';
+            } else {
+                header.style.boxShadow = 'var(--shadow-1)';
+            }
         });
     </script>
 </body>
