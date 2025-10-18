@@ -3,919 +3,1165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Skills - Google Assistant for Students</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>A Universe of Love for Tulsi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --google-blue: #4285f4;
-            --google-red: #ea4335;
-            --google-yellow: #fbbc05;
-            --google-green: #34a853;
-            --google-gray-100: #f8f9fa;
-            --google-gray-200: #e8eaed;
-            --google-gray-300: #dadce0;
-            --google-gray-500: #5f6368;
-            --google-gray-700: #3c4043;
-            --google-gray-900: #202124;
-            --shadow-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
-            --shadow-2: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
-            --shadow-3: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
-            --shadow-4: 0 2px 3px 0 rgba(60,64,67,0.3), 0 6px 10px 4px rgba(60,64,67,0.15);
-            --shadow-5: 0 4px 6px 0 rgba(60,64,67,0.3), 0 8px 12px 6px rgba(60,64,67,0.15);
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&family=Parisienne&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--google-gray-900);
-            background-color: #fff;
-            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
             overflow-x: hidden;
+            cursor: none;
         }
-
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 24px;
-            border-bottom: 1px solid var(--google-gray-200);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-family: 'Google Sans', sans-serif;
-            font-size: 22px;
-            color: var(--google-gray-700);
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-            background: linear-gradient(135deg, var(--google-blue), var(--google-red), var(--google-yellow), var(--google-green));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 24px;
-        }
-
-        nav ul li a {
-            color: var(--google-gray-700);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
-
-        nav ul li a:hover {
-            background-color: var(--google-gray-100);
-        }
-
-        .sign-in-btn {
-            background-color: var(--google-blue);
-            color: white;
-            border: none;
-            padding: 9px 23px;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 14px;
-            cursor: pointer;
-            transition: box-shadow 0.2s, background-color 0.2s;
-        }
-
-        .sign-in-btn:hover {
-            box-shadow: var(--shadow-1);
-            background-color: #3367d6;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-family: 'Google Sans', sans-serif;
-            font-size: 56px;
-            font-weight: 400;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: var(--google-gray-500);
-            margin-bottom: 40px;
-            max-width: 600px;
-        }
-
-        .search-container {
-            width: 100%;
-            max-width: 584px;
-            margin: 0 auto 30px;
-        }
-
-        .search-box {
-            width: 100%;
-            height: 44px;
-            border: 1px solid var(--google-gray-300);
-            border-radius: 22px;
-            padding: 0 16px 0 44px;
-            font-size: 16px;
-            outline: none;
-            transition: box-shadow 0.2s;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%235f6368"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>') no-repeat 12px center;
-            background-size: 20px;
-        }
-
-        .search-box:focus {
-            box-shadow: var(--shadow-3);
-            border-color: transparent;
-        }
-
-        .search-suggestions {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 20px;
-        }
-
-        .suggestion-chip {
-            background-color: var(--google-gray-100);
-            border-radius: 16px;
-            padding: 8px 16px;
-            font-size: 14px;
-            color: var(--google-gray-700);
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .suggestion-chip:hover {
-            background-color: var(--google-gray-200);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 60px 20px;
-            background-color: var(--google-gray-100);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Google Sans', sans-serif;
-            font-size: 36px;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .feature-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .feature-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: var(--shadow-1);
-            transition: box-shadow 0.2s, transform 0.2s;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .feature-card:hover {
-            box-shadow: var(--shadow-3);
-            transform: translateY(-4px);
-        }
-
-        .feature-icon {
-            width: 64px;
-            height: 64px;
+        
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            font-size: 28px;
-            color: white;
+            background: rgba(255, 105, 180, 0.5);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
         }
-
-        .icon-blue {
-            background-color: var(--google-blue);
-        }
-
-        .icon-red {
-            background-color: var(--google-red);
-        }
-
-        .icon-yellow {
-            background-color: var(--google-yellow);
-        }
-
-        .icon-green {
-            background-color: var(--google-green);
-        }
-
-        .feature-card h3 {
-            font-family: 'Google Sans', sans-serif;
-            font-size: 22px;
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .feature-card p {
-            color: var(--google-gray-500);
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .feature-link {
-            color: var(--google-blue);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            transition: opacity 0.2s;
-            cursor: pointer;
-        }
-
-        .feature-link:hover {
-            opacity: 0.8;
-        }
-
-        .feature-link .material-icons {
-            font-size: 18px;
-            margin-left: 4px;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 60px 20px;
-        }
-
-        .testimonial-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .testimonial-card {
-            background-color: white;
-            border-radius: 8px;
-            padding: 24px;
-            box-shadow: var(--shadow-1);
-            height: 100%;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 16px;
-            color: var(--google-gray-700);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-
-        .author-avatar {
+        
+        .cursor-follower {
+            position: fixed;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            margin-right: 12px;
-            background-color: var(--google-gray-200);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--google-gray-500);
+            border: 2px solid rgba(255, 105, 180, 0.3);
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.3s ease;
         }
-
-        .author-info h4 {
-            font-family: 'Google Sans', sans-serif;
-            font-weight: 500;
-            margin-bottom: 2px;
-        }
-
-        .author-info p {
-            font-size: 14px;
-            color: var(--google-gray-500);
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 60px 20px;
-            background-color: var(--google-gray-100);
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-family: 'Google Sans', sans-serif;
-            font-size: 36px;
-            font-weight: 400;
-            margin-bottom: 16px;
-        }
-
-        .cta p {
-            font-size: 18px;
-            color: var(--google-gray-500);
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background-color: var(--google-blue);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 14px;
-            cursor: pointer;
-            transition: box-shadow 0.2s, background-color 0.2s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-primary:hover {
-            box-shadow: var(--shadow-2);
-            background-color: #3367d6;
-        }
-
-        .btn-secondary {
-            background-color: white;
-            color: var(--google-gray-700);
-            border: 1px solid var(--google-gray-300);
-            padding: 12px 24px;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 14px;
-            cursor: pointer;
-            transition: box-shadow 0.2s, background-color 0.2s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .btn-secondary:hover {
-            box-shadow: var(--shadow-1);
-            background-color: var(--google-gray-100);
-        }
-
-        .btn-primary .material-icons,
-        .btn-secondary .material-icons {
-            margin-right: 8px;
-            font-size: 18px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--google-gray-100);
-            border-top: 1px solid var(--google-gray-200);
-            padding: 40px 20px 20px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-
-        .footer-column h4 {
-            font-family: 'Google Sans', sans-serif;
-            font-weight: 500;
-            margin-bottom: 16px;
-            font-size: 14px;
-            color: var(--google-gray-700);
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column ul li a {
-            color: var(--google-gray-500);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--google-gray-700);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--google-gray-200);
-            flex-wrap: wrap;
-        }
-
-        .footer-bottom p {
-            font-size: 14px;
-            color: var(--google-gray-500);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-links a {
-            color: var(--google-gray-500);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--google-gray-700);
-        }
-
-        /* Material Ripple Effect */
-        .ripple {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ripple-effect {
-            position: absolute;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            transform: scale(0);
-            animation: ripple-animation 0.6s ease-out;
-        }
-
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-
-        /* Loading Animation */
-        .loading-bar {
+        
+        /* Loading Screen */
+        .loading-screen {
             position: fixed;
             top: 0;
             left: 0;
-            height: 3px;
-            background-color: var(--google-blue);
-            width: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 1.5s ease;
+        }
+        
+        .loading-heart {
+            font-size: 5rem;
+            color: #ff69b4;
+            animation: heartbeat 1.5s infinite;
+            margin-bottom: 20px;
+        }
+        
+        .loading-text {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: #ff69b4;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
             z-index: 1000;
-            transition: width 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 3s;
         }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        
+        .logo {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            color: #ff69b4;
         }
-
-        /* Focus States */
-        a:focus, button:focus {
-            outline: 2px solid var(--google-blue);
-            outline-offset: 2px;
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
         }
-
-        /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #ff69b4;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
             overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
+        }
+        
+        .stars-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .star {
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeInUp 2s forwards;
+            animation-delay: 3.5s;
+        }
+        
+        .hero-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 6rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493, #c71585);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 4s;
+        }
+        
+        .cta-button {
+            padding: 15px 40px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 4.5s;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .heart {
+            position: absolute;
+            color: rgba(255, 105, 180, 0.7);
+            animation: float-up 15s linear infinite;
+            font-size: 20px;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Memory Lane */
+        .memory-lane {
+            padding: 100px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 80px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+        }
+        
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .memory-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .memory-card {
+            width: 350px;
+            height: 400px;
+            position: relative;
+            perspective: 1000px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+        
+        .memory-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .memory-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        .memory-card:hover .memory-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .memory-front, .memory-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+        
+        .memory-front {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .memory-icon {
+            font-size: 4rem;
+            color: #ff69b4;
+            margin-bottom: 20px;
+        }
+        
+        .memory-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ff69b4;
+        }
+        
+        .memory-date {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        
+        .memory-back {
+            background: linear-gradient(135deg, #16213e, #1a1a2e);
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .memory-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* Love Letter */
+        .love-letter {
+            padding: 100px 50px;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .letter-paper {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .letter-paper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+        }
+        
+        .letter-heading {
+            font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ff69b4;
+        }
+        
+        .letter-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        
+        .letter-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .letter-signature {
+            font-family: 'Parisienne', cursive;
+            font-size: 2rem;
+            text-align: right;
+            margin-top: 30px;
+            color: #ff69b4;
+        }
+        
+        /* Interactive Constellation */
+        .constellation {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        
+        .constellation-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .constellation-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        
+        .constellation-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .constellation-subtitle {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Virtual Gift */
+        .gift-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        }
+        
+        .gift-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+        
+        .gift-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 1s ease;
+        }
+        
+        .gift-box.opened {
+            transform: rotateY(180deg);
+        }
+        
+        .gift-face {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border: 2px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+        
+        .gift-front {
+            transform: translateZ(150px);
+        }
+        
+        .gift-back {
+            transform: rotateY(180deg) translateZ(150px);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+        
+        .gift-ribbon {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            background: #fff;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .gift-bow {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ff69b4;
+            font-size: 2rem;
+        }
+        
+        .gift-message {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .gift-message h2 {
+            font-family: 'Parisienne', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff69b4;
+        }
+        
+        .gift-message p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .gift-button {
+            padding: 10px 30px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gift-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+        
+        /* Final Section */
+        .final-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        
+        .final-title {
+            font-family: 'Parisienne', cursive;
+            font-size: 6rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #ff69b4, #ff1493, #c71585);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        
+        .heart-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 40px 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1.5s;
+        }
+        
+        .heart-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            transform: rotate(45deg);
+            box-shadow: 0 0 50px rgba(255, 105, 180, 0.8);
+            animation: heartbeat 2s infinite;
+            cursor: pointer;
+        }
+        
+        .heart-shape::before,
+        .heart-shape::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            border-radius: 50%;
+        }
+        
+        .heart-shape::before {
+            top: -50%;
+            left: 0;
+        }
+        
+        .heart-shape::after {
+            top: 0;
+            left: -50%;
+        }
+        
+        .final-message {
+            font-size: 1.5rem;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 2s;
+        }
+        
+        .signature {
+            font-family: 'Parisienne', cursive;
+            font-size: 2.5rem;
+            color: #ff69b4;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 2.5s;
+        }
+        
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 105, 180, 0.8);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        .music-player:hover {
+            transform: scale(1.1);
+        }
+        
+        .music-player i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .section-title {
+                font-size: 3.5rem;
+            }
+            
+            .memory-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .final-title {
+                font-size: 4rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Loading Bar -->
-    <div class="loading-bar" id="loadingBar"></div>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-heart">❤️</div>
 
-    <!-- Header -->
-    <header>
-        <a href="#" class="logo">
-            <div class="logo-icon">AI</div>
-            <span>Skills Assistant</span>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <button class="sign-in-btn ripple">Sign In</button>
-    </header>
-
+        <div class="loading-text">Creating a universe of love for you...</div>
+    </div>
+    
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="heartsContainer"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">For Tulsi</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#memories">Memories</a>
+            <a href="#letter">Letter</a>
+            <a href="#constellation">Constellation</a>
+            <a href="#gift">Gift</a>
+            <a href="#forever">Forever</a>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Your AI-Powered Academic Assistant</h1>
-        <p>Get instant help with scholarships, study techniques, problem-solving, and career planning - all powered by advanced AI technology.</p>
-        
-        <div class="search-container">
-            <input type="text" class="search-box" placeholder="Ask anything about your academic journey...">
-        </div>
-        
-        <div class="search-suggestions">
-            <div class="suggestion-chip">Scholarship opportunities</div>
-            <div class="suggestion-chip">Study techniques</div>
-            <div class="suggestion-chip">Problem solving</div>
-            <div class="suggestion-chip">Career guidance</div>
+    <section class="hero" id="home">
+        <div class="stars-bg"></div>
+        <div class="stars" id="starsContainer"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Happy Birthday, My Universe</h1>
+            <p class="hero-subtitle">To the most beautiful soul I've ever known</p>
+            <button class="cta-button" onclick="scrollToSection('memories')">Begin Our Journey</button>
         </div>
     </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">AI-Powered Tools for Academic Success</h2>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="feature-icon icon-blue">
-                        <span class="material-icons">psychology</span>
+    
+    <!-- Memory Lane -->
+    <section class="memory-lane" id="memories">
+        <h2 class="section-title">Our Journey Through Time</h2>
+        <div class="memory-container">
+            <div class="memory-card">
+                <div class="memory-inner">
+                    <div class="memory-front">
+                        <i class="fas fa-heart memory-icon"></i>
+                        <h3 class="memory-title">The Beginning</h3>
+                        <p class="memory-date">4 Months Ago</p>
                     </div>
-                    <h3>Problem Solver</h3>
-                    <p>Stuck on complex assignments? Get step-by-step solutions to your academic problems instantly.</p>
-                    <div class="feature-link" onclick="showNotification('Feature coming soon!')">
-                        Solve Now
-                        <span class="material-icons">arrow_forward</span>
-                    </div>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon icon-red">
-                        <span class="material-icons">school</span>
-                    </div>
-                    <h3>Scholarship Finder</h3>
-                    <p>Discover personalized scholarship opportunities that match your profile and academic interests.</p>
-                    <div class="feature-link" onclick="showNotification('Feature coming soon!')">
-                        Find Scholarships
-                        <span class="material-icons">arrow_forward</span>
+                    <div class="memory-back">
+                        <p class="memory-description">A simple online connection that changed everything. Little did I know you would become my everything.</p>
                     </div>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon icon-yellow">
-                        <span class="material-icons">menu_book</span>
+            </div>
+            <div class="memory-card">
+                <div class="memory-inner">
+                    <div class="memory-front">
+                        <i class="fas fa-smile memory-icon"></i>
+                        <h3 class="memory-title">Finding Peace</h3>
+                        <p class="memory-date">3 Months Ago</p>
                     </div>
-                    <h3>Study Coach</h3>
-                    <p>Learn effective study techniques and strategies tailored to your learning style.</p>
-                    <div class="feature-link" onclick="showNotification('Feature coming soon!')">
-                        Improve Studies
-                        <span class="material-icons">arrow_forward</span>
+                    <div class="memory-back">
+                        <p class="memory-description">Slowly, you became my peace, my smile, my habit, my everything. You broke down my walls with your love.</p>
                     </div>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon icon-green">
-                        <span class="material-icons">trending_up</span>
+            </div>
+            
+            <div class="memory-card">
+                <div class="memory-inner">
+                    <div class="memory-front">
+                        <i class="fas fa-home memory-icon"></i>
+                        <h3 class="memory-title">Coming Home</h3>
+                        <p class="memory-date">2 Months Ago</p>
                     </div>
-                    <h3>Career Navigator</h3>
-                    <p>Get personalized career advice and roadmap to achieve your professional goals.</p>
-                    <div class="feature-link" onclick="showNotification('Feature coming soon!')">
-                        Plan Career
-                        <span class="material-icons">arrow_forward</span>
+                    <div class="memory-back">
+                        <p class="memory-description">Every word from you feels like warmth, every memory with you feels like home. You are my sanctuary.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="memory-card">
+                <div class="memory-inner">
+                    <div class="memory-front">
+                        <i class="fas fa-infinity memory-icon"></i>
+                        <h3 class="memory-title">Forever Together</h3>
+                        <p class="memory-date">Today & Always</p>
+                    </div>
+                    <div class="memory-back">
+                        <p class="memory-description">120 days of memories, and I want this number to go on to infinity. When I imagine forever, it's only with you.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Students Are Saying</h2>
-            <div class="testimonial-cards">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The AI Problem Solver helped me understand complex calculus problems that I'd been struggling with for weeks. My grades have improved significantly!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
-                        <div class="author-info">
-                            <h4>Jessica Davis</h4>
-                            <p>Computer Science Major</p>
-                        </div>
+    
+    <!-- Love Letter -->
+    <section class="love-letter" id="letter">
+        <div class="letter-container">
+            <div class="letter-paper">
+                <h2 class="letter-heading">My Dearest Tulsi,</h2>
+                <p class="letter-text">Hey Tulsi my love ❤️</p>
+                <p class="letter-text">Happy Birthday to the most beautiful soul I've ever known 💖</p>
+                <p class="letter-text">It's been just 4 months since we met, but it feels like you've been a part of my heart forever 💫</p>
+                <p class="letter-text">At first, I couldn't trust easily. I was scared of losing, scared of getting attached again… but then you happened.</p>
+                <p class="letter-text">Slowly, gently, you became my peace, my smile, my habit, my everything 💞</p>
+                <p class="letter-text">Tulsi, you're not just a girl to me — you're that one person who makes my heart calm even in chaos 💗</p>
+                <p class="letter-text">I might not be great with long messages or fancy words, but I want you to feel what's inside my heart — pure love, no filters, no lies ❤️</p>
+                <p class="letter-text">I dream of small moments with you — late-night long drives, cuddling under a blanket, morning tea together while the sun rises ☀️</p>
+                <p class="letter-text">I know I've not always been there physically, but believe me, every heartbeat carries your name 💓</p>
+                <p class="letter-text">We've spent over 120 days together, and each one has been a memory I'll never forget 💕</p>
+                <p class="letter-text">So, on your special day, I just want to say — thank you for coming into my life, for loving me, for making me believe in love again 🫶</p>
+                <p class="letter-text">You are my biggest blessing, my favorite person, my forever 🌹</p>
+                <p class="letter-text">Happy Birthday, my love 🎂💖</p>
+                <p class="letter-text">I love you endlessly, Tulsi ❤️</p>
+                <p class="letter-signature">Forever yours,<br>Aryan Patel 💌💞</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive Constellation -->
+    <section class="constellation" id="constellation">
+        <canvas class="constellation-canvas" id="constellationCanvas"></canvas>
+        <div class="constellation-content">
+            <h2 class="constellation-title">Our Love Constellation</h2>
+            <p class="constellation-subtitle">Move your cursor to connect the stars of our love story</p>
+        </div>
+    </section>
+    
+    <!-- Virtual Gift -->
+    <section class="gift-section" id="gift">
+        <div class="gift-container">
+            <div class="gift-box" id="giftBox">
+                <div class="gift-face gift-front">
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow">
+                        <i class="fas fa-gift"></i>
                     </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I found three scholarships I was eligible for through the AI Scholarship Finder. I've already received $5,000 in funding!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
-                        <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
-                            <p>Business Administration</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The Study Coach transformed how I approach my studies. I'm learning more effectively in less time, and I feel less stressed about exams."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SC</div>
-                        <div class="author-info">
-                            <h4>Sophia Chen</h4>
-                            <p>Psychology Student</p>
-                        </div>
+                <div class="gift-face gift-back">
+                    <div class="gift-message">
+                        <h2>A Special Gift For You</h2>
+                        <p>My promise to love you more each day, to cherish every moment with you, and to make you the happiest person in the world.</p>
+                        <button class="gift-button" onclick="createHeartBurst()">Accept My Love</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Transform Your Academic Journey?</h2>
-            <p>Join thousands of students who are already using AI Skills Assistant to excel in their studies.</p>
-            <div class="cta-buttons">
-                <button class="btn-primary" onclick="showNotification('Feature coming soon!')">
-                    <span class="material-icons">play_arrow</span>
-                    Try Problem Solver
-                </button>
-                <button class="btn-secondary" onclick="showNotification('Feature coming soon!')">
-                    <span class="material-icons">school</span>
-                    Find Scholarships
-                </button>
-                <button class="btn-secondary" onclick="showNotification('Feature coming soon!')">
-                    <span class="material-icons">menu_book</span>
-                    Study Techniques
-                </button>
-                <button class="btn-secondary" onclick="showNotification('Feature coming soon!')">
-                    <span class="material-icons">trending_up</span>
-                    Career Planning
-                </button>
-            </div>
+    <!-- Final Section -->
+    <section class="final-section" id="forever">
+        <h2 class="final-title">I Love You More Than Words Can Say</h2>
+        <div class="heart-container" onclick="createHeartBurst()">
+            <div class="heart-shape"></div>
         </div>
+        <p class="final-message">You are my sunshine on a cloudy day, my anchor in the stormy sea, and my forever love. Every moment with you is a treasure, and I can't wait to spend the rest of my life making you smile.</p>
+        <p class="signature">Forever yours,<br>Aryan Patel 💌💞</p>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h4>Product</h4>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">Reviews</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Tutorials</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Status</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Licenses</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 AI Skills Assistant. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Sitemap</a>
-            </div>
-        </div>
-    </footer>
-
+    
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer" onclick="toggleMusic()">
+        <i class="fas fa-music" id="musicIcon"></i>
+    </div>
+    
+    <!-- Audio Element -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    
     <script>
-        // Loading Bar Animation
+        // Hide loading screen when page loads
         window.addEventListener('load', () => {
-            const loadingBar = document.getElementById('loadingBar');
-            loadingBar.style.width = '100%';
             setTimeout(() => {
-                loadingBar.style.opacity = '0';
+                document.getElementById('loadingScreen').style.opacity = '0';
                 setTimeout(() => {
-                    loadingBar.style.width = '0';
-                    loadingBar.style.opacity = '1';
-                }, 300);
-            }, 500);
-        });
-
-        // Ripple Effect for Buttons
-        document.querySelectorAll('.ripple').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.classList.add('ripple-effect');
-                
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-
-        // Search Functionality
-        const searchBox = document.querySelector('.search-box');
-        const suggestionChips = document.querySelectorAll('.suggestion-chip');
-        
-        suggestionChips.forEach(chip => {
-            chip.addEventListener('click', () => {
-                searchBox.value = chip.textContent;
-                searchBox.focus();
-            });
-        });
-
-        searchBox.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && searchBox.value.trim()) {
-                // In a real implementation, this would perform a search
-                // For demo purposes, we'll just show an alert
-                showNotification('Searching for: ' + searchBox.value);
-            }
-        });
-
-        // Notification System
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.style.position = 'fixed';
-            notification.style.bottom = '20px';
-            notification.style.left = '50%';
-            notification.style.transform = 'translateX(-50%)';
-            notification.style.backgroundColor = 'var(--google-gray-900)';
-            notification.style.color = 'white';
-            notification.style.padding = '16px 24px';
-            notification.style.borderRadius = '4px';
-            notification.style.boxShadow = 'var(--shadow-4)';
-            notification.style.zIndex = '1000';
-            notification.style.opacity = '0';
-            notification.style.transition = 'opacity 0.3s';
-            notification.textContent = message;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.opacity = '1';
-            }, 10);
-            
-            setTimeout(() => {
-                notification.style.opacity = '0';
-                setTimeout(() => {
-                    notification.remove();
-                }, 300);
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 1500);
             }, 3000);
-        }
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
         });
-
-        // Intersection Observer for Animations
+        
+        // Custom cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+        
+        // Create stars for hero background
+        function createStars() {
+            const starsContainer = document.getElementById('starsContainer');
+            const starsCount = 150;
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                star.style.animationDelay = `${Math.random() * 3}s`;
+                star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        createStars();
+        
+        // Create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = Math.random() * 3 + 10 + 's';
+            heart.style.opacity = Math.random() * 0.5 + 0.5;
+            heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+            
+            document.getElementById('heartsContainer').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 15000);
+        }
+        
+        setInterval(createHeart, 1000);
+        
+        // Create heart burst effect
+        function createHeartBurst() {
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = '❤️';
+                    heart.style.left = '50%';
+                    heart.style.top = '50%';
+                    heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+                    heart.style.opacity = Math.random() * 0.5 + 0.5;
+                    heart.style.fontSize = Math.random() * 15 + 20 + 'px';
+                    
+                    document.getElementById('heartsContainer').appendChild(heart);
+                    
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 5000);
+                }, i * 30);
+            }
+        }
+        
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
-
-        // Apply initial styles and observe elements
-        document.querySelectorAll('.feature-card, .testimonial-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s, transform 0.5s';
-            observer.observe(card);
+        
+        // Observe elements
+        document.querySelectorAll('.section-title, .memory-card, .letter-text').forEach(el => {
+            observer.observe(el);
         });
-
-        // Sign In Button
-        document.querySelector('.sign-in-btn').addEventListener('click', () => {
-            showNotification('Sign in feature coming soon!');
+        
+        // Gift box interaction
+        document.getElementById('giftBox').addEventListener('click', function() {
+            this.classList.add('opened');
         });
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            // Press '/' to focus search
-            if (e.key === '/' && document.activeElement !== searchBox) {
-                e.preventDefault();
-                searchBox.focus();
+        
+        // Constellation canvas
+        const canvas = document.getElementById('constellationCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        // Stars for constellation
+        const stars = [];
+        const starCount = 100;
+        const maxDistance = 150;
+        
+        class Star {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.brightness = Math.random() * 0.5 + 0.5;
             }
             
-            // Press 'Escape' to unfocus search
-            if (e.key === 'Escape' && document.activeElement === searchBox) {
-                searchBox.blur();
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
             }
+            
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
+                ctx.fill();
+            }
+        }
+        
+        // Initialize stars
+        for (let i = 0; i < starCount; i++) {
+            stars.push(new Star());
+        }
+        
+        // Mouse position
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        canvas.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // Animation loop for constellation
+        function animateConstellation() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Update and draw stars
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+            
+            // Draw connections
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < maxDistance) {
+                        const opacity = 1 - distance / maxDistance;
+                        ctx.beginPath();
+                        ctx.moveTo(stars[i].x, stars[i].y);
+                        ctx.lineTo(stars[j].x, stars[j].y);
+                        ctx.strokeStyle = `rgba(255, 105, 180, ${opacity * 0.5})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+                
+                // Connect stars to mouse
+                const dx = stars[i].x - mouseX;
+                const dy = stars[i].y - mouseY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < maxDistance) {
+                    const opacity = 1 - distance / maxDistance;
+                    ctx.beginPath();
+                    ctx.moveTo(stars[i].x, stars[i].y);
+                    ctx.lineTo(mouseX, mouseY);
+                    ctx.strokeStyle = `rgba(255, 105, 180, ${opacity * 0.7})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+            
+            requestAnimationFrame(animateConstellation);
+        }
+        
+        animateConstellation();
+        
+        // Music player
+        let isPlaying = false;
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const musicIcon = document.getElementById('musicIcon');
+        
+        function toggleMusic() {
+            if (isPlaying) {
+                backgroundMusic.pause();
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-music');
+            } else {
+                backgroundMusic.play();
+                musicIcon.classList.remove('fa-music');
+                musicIcon.classList.add('fa-pause');
+            }
+            isPlaying = !isPlaying;
+        }
+        
+        // Add hover effect to memory cards
+        document.querySelectorAll('.memory-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.className = 'heart';
+                        heart.innerHTML = '❤️';
+                        heart.style.left = `${this.offsetLeft + this.offsetWidth/2}px`;
+                        heart.style.top = `${this.offsetTop + this.offsetHeight/2}px`;
+                        heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+                        heart.style.opacity = Math.random() * 0.5 + 0.5;
+                        heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+                        
+                        document.getElementById('heartsContainer').appendChild(heart);
+                        
+                        setTimeout(() => {
+                            heart.remove();
+                        }, 5000);
+                    }, i * 100);
+                }
+            });
         });
     </script>
-</body>
+    </body>
 </html>
+   
