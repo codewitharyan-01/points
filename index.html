@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Universe of Love for Tulsi</title>
+    <title>A Love Letter to Tulsi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&family=Parisienne&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
         
         * {
             margin: 0;
@@ -16,34 +16,10 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background: #000;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
             color: #fff;
             overflow-x: hidden;
-            cursor: none;
-        }
-        
-        /* Custom Cursor */
-        .cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: rgba(255, 105, 180, 0.5);
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease;
-            mix-blend-mode: difference;
-        }
-        
-        .cursor-follower {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 105, 180, 0.3);
-            pointer-events: none;
-            z-index: 9998;
-            transition: transform 0.3s ease;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">❤️</text></svg>'), auto;
         }
         
         /* Loading Screen */
@@ -53,29 +29,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #000;
+            background: #0f0c29;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 10000;
+            z-index: 1000;
             transition: opacity 1.5s ease;
         }
         
         .loading-heart {
             font-size: 5rem;
-            color: #ff69b4;
             animation: heartbeat 1.5s infinite;
             margin-bottom: 20px;
-        }
-        
-        .loading-text {
-            font-family: 'Parisienne', cursive;
-            font-size: 2rem;
-            color: #ff69b4;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 1s;
         }
         
         @keyframes heartbeat {
@@ -83,9 +49,10 @@
             50% { transform: scale(1.2); }
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .loading-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: #e94560;
         }
         
         /* Navigation */
@@ -94,21 +61,18 @@
             top: 0;
             width: 100%;
             padding: 20px 50px;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(15, 12, 41, 0.8);
             backdrop-filter: blur(10px);
-            z-index: 1000;
+            z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            opacity: 0;
-            animation: fadeIn 1.5s forwards;
-            animation-delay: 3s;
         }
         
         .logo {
-            font-family: 'Parisienne', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: 2rem;
-            color: #ff69b4;
+            color: #e94560;
         }
         
         .nav-links {
@@ -120,10 +84,26 @@
             color: #fff;
             text-decoration: none;
             transition: color 0.3s ease;
+            position: relative;
         }
         
         .nav-links a:hover {
-            color: #ff69b4;
+            color: #e94560;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #e94560;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         /* Hero Section */
@@ -133,69 +113,43 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
         
-        .stars-bg {
+        .hero-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-        }
-        
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .star {
-            position: absolute;
-            background: #fff;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
-        
-        @keyframes twinkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
-        }
-        
-        .hero-content {
-            text-align: center;
-            z-index: 2;
-            opacity: 0;
-            animation: fadeInUp 2s forwards;
-            animation-delay: 3.5s;
+            background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458af70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: -1;
         }
         
         .hero-title {
-            font-family: 'Parisienne', cursive;
-            font-size: 6rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
             margin-bottom: 20px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493, #c71585);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+            opacity: 0;
+            animation: fadeInUp 1.5s ease forwards;
+            animation-delay: 0.5s;
         }
         
         .hero-subtitle {
             font-size: 1.5rem;
+            max-width: 600px;
             margin-bottom: 40px;
             opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 4s;
+            animation: fadeInUp 1.5s ease forwards;
+            animation-delay: 1s;
         }
         
         .cta-button {
             padding: 15px 40px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493);
+            background: linear-gradient(135deg, #e94560, #f27121);
             color: white;
             border: none;
             border-radius: 50px;
@@ -203,20 +157,20 @@
             cursor: pointer;
             transition: all 0.3s ease;
             opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 4.5s;
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            animation: fadeInUp 1.5s ease forwards;
+            animation-delay: 1.5s;
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
         }
         
         .cta-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.6);
+            box-shadow: 0 10px 25px rgba(233, 69, 96, 0.6);
         }
         
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -224,7 +178,7 @@
             }
         }
         
-        /* Floating Hearts */
+        /* Floating Elements */
         .floating-hearts {
             position: fixed;
             top: 0;
@@ -237,7 +191,7 @@
         
         .heart {
             position: absolute;
-            color: rgba(255, 105, 180, 0.7);
+            color: rgba(233, 69, 96, 0.7);
             animation: float-up 15s linear infinite;
             font-size: 20px;
         }
@@ -259,337 +213,226 @@
             }
         }
         
-        /* Memory Lane */
-        .memory-lane {
+        /* Journey Section */
+        .journey {
             padding: 100px 50px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .section-title {
-            font-family: 'Parisienne', cursive;
-            font-size: 5rem;
-            text-align: center;
-            margin-bottom: 80px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s ease;
-        }
-        
-        .section-title.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .memory-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .memory-card {
-            width: 350px;
-            height: 400px;
-            position: relative;
-            perspective: 1000px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #e94560;
         }
         
-        .memory-card.visible {
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: rgba(233, 69, 96, 0.3);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 50px;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 50px;
+        }
+        
+        .timeline-item.visible {
             opacity: 1;
             transform: translateY(0);
         }
         
-        .memory-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-        
-        .memory-card:hover .memory-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .memory-front, .memory-back {
+        .timeline-dot {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #e94560;
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px rgba(233, 69, 96, 0.2);
         }
         
-        .memory-front {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-date {
+            color: #e94560;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-description {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Message Section */
+        .message-section {
+            padding: 100px 50px;
+            background: rgba(15, 12, 41, 0.5);
+            position: relative;
+        }
+        
+        .message-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .message-line {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .message-line.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .highlight {
+            color: #e94560;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #e94560;
+            transition: width 0.5s ease;
+        }
+        
+        .highlight:hover::after {
+            width: 100%;
+        }
+        
+        /* Interactive Wishes */
+        .wishes-section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+        
+        .wishes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .wish-card {
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        .memory-icon {
-            font-size: 4rem;
-            color: #ff69b4;
+        .wish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(233, 69, 96, 0.3);
+        }
+        
+        .wish-icon {
+            font-size: 3rem;
+            color: #e94560;
             margin-bottom: 20px;
         }
         
-        .memory-title {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: #ff69b4;
+        .wish-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
         
-        .memory-date {
-            font-size: 1rem;
-            color: #ccc;
+        .wish-description {
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
         }
         
-        .memory-back {
-            background: linear-gradient(135deg, #16213e, #1a1a2e);
-            transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+        .wish-card:hover .wish-description {
+            opacity: 1;
+            transform: translateY(0);
         }
         
-        .memory-description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: center;
-        }
-        
-        /* Love Letter */
-        .love-letter {
-            padding: 100px 50px;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .letter-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .letter-paper {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .letter-paper::before {
+        .wish-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493);
-        }
-        
-        .letter-heading {
-            font-family: 'Parisienne', cursive;
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #ff69b4;
-        }
-        
-        .letter-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.3), rgba(242, 113, 33, 0.3));
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s ease;
+            transition: opacity 0.3s ease;
         }
         
-        .letter-text.visible {
+        .wish-card:hover::before {
             opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .letter-signature {
-            font-family: 'Parisienne', cursive;
-            font-size: 2rem;
-            text-align: right;
-            margin-top: 30px;
-            color: #ff69b4;
-        }
-        
-        /* Interactive Constellation */
-        .constellation {
-            height: 100vh;
-            position: relative;
-            overflow: hidden;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-        }
-        
-        .constellation-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .constellation-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 2;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 1s;
-        }
-        
-        .constellation-title {
-            font-family: 'Parisienne', cursive;
-            font-size: 4rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .constellation-subtitle {
-            font-size: 1.3rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Virtual Gift */
-        .gift-section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-        }
-        
-        .gift-container {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            perspective: 1000px;
-        }
-        
-        .gift-box {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 1s ease;
-        }
-        
-        .gift-box.opened {
-            transform: rotateY(180deg);
-        }
-        
-        .gift-face {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
-            border: 2px solid #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backface-visibility: hidden;
-            border-radius: 10px;
-        }
-        
-        .gift-front {
-            transform: translateZ(150px);
-        }
-        
-        .gift-back {
-            transform: rotateY(180deg) translateZ(150px);
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-        }
-        
-        .gift-ribbon {
-            position: absolute;
-            width: 100%;
-            height: 40px;
-            background: #fff;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .gift-bow {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 80px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ff69b4;
-            font-size: 2rem;
-        }
-        
-        .gift-message {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .gift-message h2 {
-            font-family: 'Parisienne', cursive;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #ff69b4;
-        }
-        
-        .gift-message p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .gift-button {
-            padding: 10px 30px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .gift-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
         }
         
         /* Final Section */
@@ -599,85 +442,51 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+        
+        .final-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: -1;
         }
         
         .final-title {
-            font-family: 'Parisienne', cursive;
+            font-family: 'Great Vibes', cursive;
             font-size: 6rem;
             margin-bottom: 30px;
-            background: linear-gradient(90deg, #ff69b4, #ff1493, #c71585);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 1s;
+            color: #e94560;
         }
         
-        .heart-container {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            margin: 40px 0;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 1.5s;
-        }
-        
-        .heart-shape {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
-            transform: rotate(45deg);
-            box-shadow: 0 0 50px rgba(255, 105, 180, 0.8);
-            animation: heartbeat 2s infinite;
-            cursor: pointer;
-        }
-        
-        .heart-shape::before,
-        .heart-shape::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
-            border-radius: 50%;
-        }
-        
-        .heart-shape::before {
-            top: -50%;
-            left: 0;
-        }
-        
-        .heart-shape::after {
-            top: 0;
-            left: -50%;
-        }
-        
-        .final-message {
+        .final-subtitle {
             font-size: 1.5rem;
             max-width: 600px;
-            text-align: center;
             margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 2s;
+        }
+        
+        .heart-beat {
+            font-size: 8rem;
+            color: #e94560;
+            cursor: pointer;
+            animation: heartbeat 2s infinite;
+            transition: all 0.3s ease;
+        }
+        
+        .heart-beat:hover {
+            transform: scale(1.2);
         }
         
         .signature {
-            font-family: 'Parisienne', cursive;
-            font-size: 2.5rem;
-            color: #ff69b4;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            animation-delay: 2.5s;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            margin-top: 50px;
         }
         
         /* Music Player */
@@ -687,7 +496,7 @@
             right: 30px;
             width: 60px;
             height: 60px;
-            background: rgba(255, 105, 180, 0.8);
+            background: rgba(233, 69, 96, 0.8);
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -695,11 +504,6 @@
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             z-index: 100;
-            transition: all 0.3s ease;
-        }
-        
-        .music-player:hover {
-            transform: scale(1.1);
         }
         
         .music-player i {
@@ -710,16 +514,28 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 4rem;
-            }
-            
-            .section-title {
                 font-size: 3.5rem;
             }
             
-            .memory-card {
+            .section-title {
+                font-size: 3rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
                 width: 100%;
-                max-width: 350px;
+                left: 0 !important;
+                padding-left: 60px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+            }
+            
+            .timeline-dot {
+                left: 20px !important;
+                right: auto !important;
             }
             
             .final-title {
@@ -729,161 +545,139 @@
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-heart">❤️</div>
-
-        <div class="loading-text">Creating a universe of love for you...</div>
+        <div class="loading-text">Preparing something special for you...</div>
     </div>
-    
-    <!-- Floating Hearts -->
-    <div class="floating-hearts" id="heartsContainer"></div>
     
     <!-- Navigation -->
     <nav>
         <div class="logo">For Tulsi</div>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#memories">Memories</a>
-            <a href="#letter">Letter</a>
-            <a href="#constellation">Constellation</a>
-            <a href="#gift">Gift</a>
-            <a href="#forever">Forever</a>
+            <a href="#journey">Our Journey</a>
+            <a href="#message">My Words</a>
+            <a href="#wishes">Wishes</a>
         </div>
     </nav>
     
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="heartsContainer"></div>
+    
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="stars-bg"></div>
-        <div class="stars" id="starsContainer"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Happy Birthday, My Universe</h1>
-            <p class="hero-subtitle">To the most beautiful soul I've ever known</p>
-            <button class="cta-button" onclick="scrollToSection('memories')">Begin Our Journey</button>
-        </div>
+        <div class="hero-bg"></div>
+        <h1 class="hero-title">Happy Birthday, My Love</h1>
+        <p class="hero-subtitle">To the most beautiful soul I've ever known</p>
+        <button class="cta-button" onclick="scrollToSection('journey')">Begin Our Journey</button>
     </section>
     
-    <!-- Memory Lane -->
-    <section class="memory-lane" id="memories">
-        <h2 class="section-title">Our Journey Through Time</h2>
-        <div class="memory-container">
-            <div class="memory-card">
-                <div class="memory-inner">
-                    <div class="memory-front">
-                        <i class="fas fa-heart memory-icon"></i>
-                        <h3 class="memory-title">The Beginning</h3>
-                        <p class="memory-date">4 Months Ago</p>
-                    </div>
-                    <div class="memory-back">
-                        <p class="memory-description">A simple online connection that changed everything. Little did I know you would become my everything.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="memory-card">
-                <div class="memory-inner">
-                    <div class="memory-front">
-                        <i class="fas fa-smile memory-icon"></i>
-                        <h3 class="memory-title">Finding Peace</h3>
-                        <p class="memory-date">3 Months Ago</p>
-                    </div>
-                    <div class="memory-back">
-                        <p class="memory-description">Slowly, you became my peace, my smile, my habit, my everything. You broke down my walls with your love.</p>
-                    </div>
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+        <h2 class="section-title">Our Journey Together</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">4 Months Ago</div>
+                    <h3 class="timeline-title">The First Connection</h3>
+                    <p class="timeline-description">A simple online message that changed everything. Little did I know you would become my everything.</p>
                 </div>
             </div>
             
-            <div class="memory-card">
-                <div class="memory-inner">
-                    <div class="memory-front">
-                        <i class="fas fa-home memory-icon"></i>
-                        <h3 class="memory-title">Coming Home</h3>
-                        <p class="memory-date">2 Months Ago</p>
-                    </div>
-                    <div class="memory-back">
-                        <p class="memory-description">Every word from you feels like warmth, every memory with you feels like home. You are my sanctuary.</p>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">3 Months Ago</div>
+                    <h3 class="timeline-title">Opening My Heart</h3>
+                    <p class="timeline-description">Slowly, you broke down my walls. You became my peace, my smile, my habit, my everything.</p>
                 </div>
             </div>
             
-            <div class="memory-card">
-                <div class="memory-inner">
-                    <div class="memory-front">
-                        <i class="fas fa-infinity memory-icon"></i>
-                        <h3 class="memory-title">Forever Together</h3>
-                        <p class="memory-date">Today & Always</p>
-                    </div>
-                    <div class="memory-back">
-                        <p class="memory-description">120 days of memories, and I want this number to go on to infinity. When I imagine forever, it's only with you.</p>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2 Months Ago</div>
+                    <h3 class="timeline-title">Finding Home</h3>
+                    <p class="timeline-description">Every word from you feels like warmth, every memory with you feels like home.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">1 Month Ago</div>
+                    <h3 class="timeline-title">Dreaming Together</h3>
+                    <p class="timeline-description">Late-night drives, cuddling under blankets, morning tea - I dream of these moments with you.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Today</div>
+                    <h3 class="timeline-title">Forever Begins</h3>
+                    <p class="timeline-description">120 days of memories, and I want this number to go on to infinity. When I imagine forever, it's only with you.</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Love Letter -->
-    <section class="love-letter" id="letter">
-        <div class="letter-container">
-            <div class="letter-paper">
-                <h2 class="letter-heading">My Dearest Tulsi,</h2>
-                <p class="letter-text">Hey Tulsi my love ❤️</p>
-                <p class="letter-text">Happy Birthday to the most beautiful soul I've ever known 💖</p>
-                <p class="letter-text">It's been just 4 months since we met, but it feels like you've been a part of my heart forever 💫</p>
-                <p class="letter-text">At first, I couldn't trust easily. I was scared of losing, scared of getting attached again… but then you happened.</p>
-                <p class="letter-text">Slowly, gently, you became my peace, my smile, my habit, my everything 💞</p>
-                <p class="letter-text">Tulsi, you're not just a girl to me — you're that one person who makes my heart calm even in chaos 💗</p>
-                <p class="letter-text">I might not be great with long messages or fancy words, but I want you to feel what's inside my heart — pure love, no filters, no lies ❤️</p>
-                <p class="letter-text">I dream of small moments with you — late-night long drives, cuddling under a blanket, morning tea together while the sun rises ☀️</p>
-                <p class="letter-text">I know I've not always been there physically, but believe me, every heartbeat carries your name 💓</p>
-                <p class="letter-text">We've spent over 120 days together, and each one has been a memory I'll never forget 💕</p>
-                <p class="letter-text">So, on your special day, I just want to say — thank you for coming into my life, for loving me, for making me believe in love again 🫶</p>
-                <p class="letter-text">You are my biggest blessing, my favorite person, my forever 🌹</p>
-                <p class="letter-text">Happy Birthday, my love 🎂💖</p>
-                <p class="letter-text">I love you endlessly, Tulsi ❤️</p>
-                <p class="letter-signature">Forever yours,<br>Aryan Patel 💌💞</p>
+    <!-- Message Section -->
+    <section class="message-section" id="message">
+        <div class="message-container">
+            <h2 class="section-title">My Heart Speaks</h2>
+            <div class="message-line">Hey Tulsi my love ❤️</div>
+            <div class="message-line">Happy Birthday to the <span class="highlight">most beautiful soul</span> I've ever known 💖</div>
+            <div class="message-line">It's been just 4 months since we met, but it feels like you've been a part of my heart <span class="highlight">forever</span> 💫</div>
+            <div class="message-line">You became the reason behind my late-night thoughts, my random smiles, and my quiet prayers 🙏</div>
+            <div class="message-line">Tulsi, you're not just a girl to me — you're that one person who makes my heart calm even in chaos 💗</div>
+            <div class="message-line">I might not be great with long messages or fancy words, but I want you to feel what's inside my heart — <span class="highlight">pure love</span>, no filters, no lies ❤️</div>
+            <div class="message-line">Every heartbeat carries your name 💓 Every second without you feels incomplete.</div>
+            <div class="message-line">Thank you for coming into my life, for loving me, for making me believe in love again 🫶</div>
+            <div class="message-line">You are my biggest blessing, my favorite person, my forever 🌹</div>
+            <div class="message-line">I love you endlessly, Tulsi ❤️</div>
+        </div>
+    </section>
+    
+    <!-- Wishes Section -->
+    <section class="wishes-section" id="wishes">
+        <h2 class="section-title">Birthday Wishes For You</h2>
+        <div class="wishes-container">
+            <div class="wish-card">
+                <i class="fas fa-laugh wish-icon"></i>
+                <h3 class="wish-title">Laughter</h3>
+
+                <p class="wish-description">May your days be filled with laughter that lights up your eyes and warms your heart.</p>
+            </div>
+            
+            <div class="wish-card">
+                <i class="fas fa-heart wish-icon"></i>
+                <h3 class="wish-title">Love</h3>
+                <p class="wish-description">May you always feel surrounded by love, today and every day of your life.</p>
+            </div>
+            
+            <div class="wish-card">
+                <i class="fas fa-star wish-icon"></i>
+                <h3 class="wish-title">Dreams</h3>
+                <p class="wish-description">May all your dreams come true, and may you have the courage to chase them.</p>
+            </div>
+            
+            <div class="wish-card">
+                <i class="fas fa-gift wish-icon"></i>
+                <h3 class="wish-title">Joy</h3>
+                <p class="wish-description">May your life be filled with moments of pure, unadulterated joy.</p>
             </div>
         </div>
     </section>
     
-    <!-- Interactive Constellation -->
-    <section class="constellation" id="constellation">
-        <canvas class="constellation-canvas" id="constellationCanvas"></canvas>
-        <div class="constellation-content">
-            <h2 class="constellation-title">Our Love Constellation</h2>
-            <p class="constellation-subtitle">Move your cursor to connect the stars of our love story</p>
-        </div>
-    </section>
-    
-    <!-- Virtual Gift -->
-    <section class="gift-section" id="gift">
-        <div class="gift-container">
-            <div class="gift-box" id="giftBox">
-                <div class="gift-face gift-front">
-                    <div class="gift-ribbon"></div>
-                    <div class="gift-bow">
-                        <i class="fas fa-gift"></i>
-                    </div>
-                </div>
-                <div class="gift-face gift-back">
-                    <div class="gift-message">
-                        <h2>A Special Gift For You</h2>
-                        <p>My promise to love you more each day, to cherish every moment with you, and to make you the happiest person in the world.</p>
-                        <button class="gift-button" onclick="createHeartBurst()">Accept My Love</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Final Section -->
-    <section class="final-section" id="forever">
-        <h2 class="final-title">I Love You More Than Words Can Say</h2>
-        <div class="heart-container" onclick="createHeartBurst()">
-            <div class="heart-shape"></div>
-        </div>
-        <p class="final-message">You are my sunshine on a cloudy day, my anchor in the stormy sea, and my forever love. Every moment with you is a treasure, and I can't wait to spend the rest of my life making you smile.</p>
+    <section class="final-section">
+        <div class="final-bg"></div>
+        <h2 class="final-title">I Love You</h2>
+        <p class="final-subtitle">More than words can express, more than time can measure</p>
+        <div class="heart-beat" onclick="createHeartBurst()">❤️</div>
         <p class="signature">Forever yours,<br>Aryan Patel 💌💞</p>
     </section>
     
@@ -897,7 +691,7 @@
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
     
-    <script>
+     <script>
         // Hide loading screen when page loads
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -905,46 +699,8 @@
                 setTimeout(() => {
                     document.getElementById('loadingScreen').style.display = 'none';
                 }, 1500);
-            }, 3000);
+            }, 2000);
         });
-        
-        // Custom cursor
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            
-            setTimeout(() => {
-                cursorFollower.style.left = e.clientX + 'px';
-                cursorFollower.style.top = e.clientY + 'px';
-            }, 100);
-        });
-        
-        // Create stars for hero background
-        function createStars() {
-            const starsContainer = document.getElementById('starsContainer');
-            const starsCount = 150;
-            for (let i = 0; i < starsCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                
-                const size = Math.random() * 3;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 100}%`;
-                
-                star.style.animationDelay = `${Math.random() * 3}s`;
-                star.style.animationDuration = `${Math.random() * 3 + 2}s`;
-                
-                starsContainer.appendChild(star);
-            }
-        }
-        
-        createStars();
         
         // Create floating hearts
         function createHeart() {
@@ -963,11 +719,12 @@
             }, 15000);
         }
         
+        // Initialize hearts
         setInterval(createHeart, 1000);
         
         // Create heart burst effect
         function createHeartBurst() {
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 30; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
                     heart.className = 'heart';
@@ -983,14 +740,17 @@
                     setTimeout(() => {
                         heart.remove();
                     }, 5000);
-                }, i * 30);
+                }, i * 50);
             }
         }
-        
-        // Smooth scrolling
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
         }
+        
+        // Timeline animation on scroll
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const messageLines = document.querySelectorAll('.message-line');
+        
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -1004,121 +764,14 @@
             });
         }, observerOptions);
         
-        // Observe elements
-        document.querySelectorAll('.section-title, .memory-card, .letter-text').forEach(el => {
-            observer.observe(el);
+        timelineItems.forEach(item => {
+            observer.observe(item);
         });
         
-        // Gift box interaction
-        document.getElementById('giftBox').addEventListener('click', function() {
-            this.classList.add('opened');
+        messageLines.forEach((line, index) => {
+            line.style.transitionDelay = `${index * 0.2}s`;
+            observer.observe(line);
         });
-        
-        // Constellation canvas
-        const canvas = document.getElementById('constellationCanvas');
-        const ctx = canvas.getContext('2d');
-        
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-        
-        // Stars for constellation
-        const stars = [];
-        const starCount = 100;
-        const maxDistance = 150;
-        
-        class Star {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = Math.random() * 0.5 - 0.25;
-                this.speedY = Math.random() * 0.5 - 0.25;
-                this.brightness = Math.random() * 0.5 + 0.5;
-            }
-            
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-            }
-            
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${this.brightness})`;
-                ctx.fill();
-            }
-        }
-        
-        // Initialize stars
-        for (let i = 0; i < starCount; i++) {
-            stars.push(new Star());
-        }
-        
-        // Mouse position
-        let mouseX = 0;
-        let mouseY = 0;
-        
-        canvas.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-        
-        // Animation loop for constellation
-        function animateConstellation() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Update and draw stars
-            stars.forEach(star => {
-                star.update();
-                star.draw();
-            });
-            
-            // Draw connections
-            for (let i = 0; i < stars.length; i++) {
-                for (let j = i + 1; j < stars.length; j++) {
-                    const dx = stars[i].x - stars[j].x;
-                    const dy = stars[i].y - stars[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < maxDistance) {
-                        const opacity = 1 - distance / maxDistance;
-                        ctx.beginPath();
-                        ctx.moveTo(stars[i].x, stars[i].y);
-                        ctx.lineTo(stars[j].x, stars[j].y);
-                        ctx.strokeStyle = `rgba(255, 105, 180, ${opacity * 0.5})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-                
-                // Connect stars to mouse
-                const dx = stars[i].x - mouseX;
-                const dy = stars[i].y - mouseY;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < maxDistance) {
-                    const opacity = 1 - distance / maxDistance;
-                    ctx.beginPath();
-                    ctx.moveTo(stars[i].x, stars[i].y);
-                    ctx.lineTo(mouseX, mouseY);
-                    ctx.strokeStyle = `rgba(255, 105, 180, ${opacity * 0.7})`;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            }
-            
-            requestAnimationFrame(animateConstellation);
-        }
-        
-        animateConstellation();
         
         // Music player
         let isPlaying = false;
@@ -1138,10 +791,10 @@
             isPlaying = !isPlaying;
         }
         
-        // Add hover effect to memory cards
-        document.querySelectorAll('.memory-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                for (let i = 0; i < 5; i++) {
+        // Add click effect to wish cards
+         document.querySelectorAll('.wish-card').forEach(card => {
+            card.addEventListener('click', function() {
+                for (let i = 0; i < 10; i++) {
                     setTimeout(() => {
                         const heart = document.createElement('div');
                         heart.className = 'heart';
@@ -1157,11 +810,10 @@
                         setTimeout(() => {
                             heart.remove();
                         }, 5000);
-                    }, i * 100);
+                    }, i * 50);
                 }
             });
         });
     </script>
-    </body>
+</body>
 </html>
-   
