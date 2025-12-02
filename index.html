@@ -3,18 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTU Ethics Exam Answersheet</title>
+    <title>6 Months of Love - Aryan & Tulsi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
         
         * {
             margin: 0;
@@ -23,1008 +15,622 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 49%, #fecfef 100%);
             color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo i {
-            font-size: 1.8rem;
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .logo h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-            margin: 0 20px;
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--secondary-color);
-        }
-        
-        .main-content {
-            padding: 2rem 0;
-        }
-        
-        .section {
-            margin-bottom: 3rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-        
-        .section-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .section-title {
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .section-title i {
-            margin-right: 10px;
-        }
-        
-        .frequency-badge {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .section-content {
-            padding: 1.5rem;
-        }
-        
-        .question {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1.5rem;
-        }
-        
-        .question:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-        
-        .question-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .marks {
-            background-color: var(--success-color);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        
-        .answer {
-            margin-left: 20px;
-        }
-        
-        .answer p {
-            margin-bottom: 0.8rem;
-        }
-        
-        .answer ul, .answer ol {
-            margin-left: 20px;
-            margin-bottom: 0.8rem;
-        }
-        
-        .answer li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight {
-            background-color: #fff9e6;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-        }
-        
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin: 0 15px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .copyright {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-        
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--secondary-color);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s;
-            z-index: 1000;
-        }
-        
-        .scroll-to-top.visible {
-            opacity: 1;
-        }
-        
-        .search-container {
-            margin: 2rem auto;
-            max-width: 600px;
-        }
-        
-        .search-box {
+            overflow-x: hidden;
             position: relative;
         }
         
-        .search-box input {
+        /* Animated Background */
+        .hearts-container {
+            position: fixed;
             width: 100%;
-            padding: 12px 45px 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            font-size: 1rem;
-            outline: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
         }
         
-        .search-box button {
+        .heart {
             position: absolute;
-            right: 5px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            cursor: pointer;
+            top: -50px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        
+        .date-anniversary {
+            background: rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        
+        /* Navigation */
+        nav {
             display: flex;
             justify-content: center;
-            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
         
-        .search-box button:hover {
-            background-color: var(--primary-color);
-        }
-        
-        .notification {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            background-color: var(--success-color);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            transform: translateX(150%);
-            transition: transform 0.3s ease-out;
-            z-index: 1000;
-            max-width: 300px;
-        }
-        
-        .notification.show {
-            transform: translateX(0);
-        }
-        
-        .notification-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .notification-close {
-            position: absolute;
-            top: 5px;
-            right: 10px;
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.4);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 30px;
             cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #fff;
         }
         
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff6b8b;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        /* Love Letter */
+        .love-letter {
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .love-letter::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 20px;
+            background: #ff6b8b;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .letter-content {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 100%;
+            background: #ff6b8b;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            width: 45%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: #ff6b8b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background: #ff6b8b;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -52.5px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -52.5px;
+        }
+        
+        /* Quotes */
+        .quote-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .quote-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .quote-text::before {
+            content: """;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: #ff6b8b;
+            font-family: serif;
+        }
+        
+        .quote-author {
+            text-align: right;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        /* Interactive Section */
+        .interactive-section {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .love-meter {
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        
+        .meter-bar {
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b8b, #ff9a9e);
+            width: 0%;
+            transition: width 2s ease;
+            border-radius: 15px;
+        }
+        
+        .meter-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .surprise-btn {
+            background: linear-gradient(45deg, #ff6b8b, #ff9a9e);
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .surprise-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .surprise-message {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+        
+        .footer-text {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .heart-icon {
+            color: #ff6b8b;
+            animation: pulse 1.5s infinite;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
+            h1 {
+                font-size: 2.5rem;
             }
             
-            nav ul {
-                margin-top: 10px;
+            .timeline::before {
+                left: 30px;
             }
             
-            nav ul li {
-                margin: 0 10px;
+            .timeline-item {
+                width: calc(100% - 60px);
+                left: 60px !important;
             }
             
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .stats {
-                flex-direction: column;
-            }
-            
-            .stat-item {
-                margin: 10px 0;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-            }
-            
-            .footer-section {
-                margin: 15px 0;
+            .timeline-dot {
+                left: -50px !important;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Animated Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Header -->
     <header>
-        <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-graduation-cap"></i>
-                <h1>GTU Ethics Exam Answersheet</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#5-times">Appeared 5 Times</a></li>
-                    <li><a href="#4-times">Appeared 4 Times</a></li>
-                    <li><a href="#3-times">Appeared 3 Times</a></li>
-                    <li><a href="#2-times">Appeared 2 Times</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Aryan & Tulsi</h1>
+        <p class="subtitle">A Journey of Love</p>
+        <div class="date-anniversary">June 2nd - December 2nd: 6 Months Together</div>
     </header>
     
-    <section class="hero">
-        <div class="container">
-            <h2>Professional Ethics Exam Preparation</h2>
-            <p>Comprehensive answersheet for GTU Professional Ethics exam questions. All questions worth 5 marks with detailed explanations and examples.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div>Questions Appeared 5 Times</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div>Questions Appeared 4 Times</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">11</div>
-                    <div>Questions Appeared 3 Times</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">16</div>
-                    <div>Questions Appeared 2 Times</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Navigation -->
+    <nav>
+        <button class="nav-btn" onclick="scrollToSection('gallery')">Our Memories</button>
+        <button class="nav-btn" onclick="scrollToSection('letter')">Love Letter</button>
+        <button class="nav-btn" onclick="scrollToSection('timeline')">Our Journey</button>
+        <button class="nav-btn" onclick="scrollToSection('quotes')">Love Quotes</button>
+        <button class="nav-btn" onclick="scrollToSection('interactive')">For You</button>
+    </nav>
     
-    <div class="container main-content">
-        <div class="search-container">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search for questions...">
-                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+    <!-- Main Content -->
+    <main>
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Our Beautiful Moments</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/8864effc-9e1b-46d7-b398-a806a1555646.jpg?auth_key=1864692832-7d3dd8a155d3468a98f58342274205c3-0-a5ab7bdff5f63973885b6ee9ba2be21b" alt="Video call moment">
+                    <div class="gallery-caption">Our sweet conversations that light up my day</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/cc4b9613-caee-45dc-b5fd-b91ebdc66f8c.jpg?auth_key=1864692832-5d0511a0e8874a039b1660a406fb1303-0-78c0ef7bd6b1abb35260a042e4634236" alt="Tulsi in traditional attire">
+                    <div class="gallery-caption">My beautiful Tulsi, looking absolutely stunning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/fc75c37d-7b29-42a0-8c24-9ea5791a6867.jpg?auth_key=1864692832-169670ab6ffa465090e2a9fc2608e22f-0-669670f6c31941945e538c211b0a442d" alt="Another video call moment">
+                    <div class="gallery-caption">Every moment with you is precious</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/b6bf7315-e1c1-4bbb-a51b-7459c0d8762d.jpg?auth_key=1864692832-82f9f701ada944d094780f417ed47a71-0-ec4b6d9897cad84f6b9d2b7d2d0a41bf" alt="Late night conversation">
+                    <div class="gallery-caption">Late night talks that mean the world to me</div>
+                </div>
             </div>
-        </div>
+        </section>
         
-        <section id="5-times" class="section">
-            <div class="section-header">
-                <div class="section-title">
-                    <i class="fas fa-star"></i>
-                    Questions Appeared 5 Times
+        <!-- Love Letter Section -->
+        <section id="letter">
+            <h2>A Letter to My Love</h2>
+            <div class="love-letter">
+                <div class="letter-content">
+                    <p>My dearest Tulsi, my Chiku, my Tuli, my Baby,</p>
+                    <p>As I sit down to write these words, my heart is overflowing with emotions that words can barely capture. Six months ago, on June 2nd, our beautiful journey began, and every single day since has been a testament to the incredible love we share.</p>
+                    <p>Thank you for being the light in my life, the melody in my heart, and the peace in my soul. When I look at you, I see not just the woman I love, but my best friend, my confidant, and my greatest supporter. Your smile has the power to brighten my darkest days, and your laughter is the sweetest music I've ever heard.</p>
+                    <p>In these six months, you've taught me the true meaning of love. You've shown me that love isn't just about grand gestures, but about the small, everyday moments that we share. It's in the way you listen to my stories, the way you comfort me when I'm down, and the way you celebrate my victories as if they were your own.</p>
+                    <p>Thank you for your patience when I'm difficult, for your understanding when I make mistakes, and for your unwavering belief in us. You've made me a better person just by being in my life, and for that, I'll be eternally grateful.</p>
+                    <p>I love the way your eyes sparkle when you talk about things you're passionate about. I love the way you get excited about the little things. I love the way you care for others, and I especially love the way you care for me.</p>
+                    <p>Every moment with you feels like a beautiful dream that I never want to wake up from. You've filled my life with so much joy, laughter, and love that sometimes I wonder how I got so lucky to have you.</p>
+                    <p>As we celebrate these six months together, I want you to know that my love for you grows stronger with each passing day. I promise to cherish you, to support you, to make you laugh, and to be there for you through all of life's ups and downs.</p>
+                    <p>You are my today and all of my tomorrows. You are my forever.</p>
+                    <p>With all my love and all my heart,</p>
+                    <p>Your Aryan</p>
                 </div>
-                <div class="frequency-badge">Highest Frequency</div>
             </div>
-            <div class="section-content">
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Ethical dilemma: define/explain with example</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> An ethical dilemma is a situation where an individual faces a conflict between moral imperatives, in which to obey one would result in transgressing another. It's a choice between two or more options, neither of which resolves the situation in an ethically acceptable fashion.</p>
-                        <p><span class="highlight">Characteristics:</span></p>
-                        <ul>
-                            <li>Involves a conflict between at least two moral values</li>
-                            <li>There is no perfect solution</li>
-                            <li>Requires careful consideration of all consequences</li>
-                            <li>Often involves professional responsibilities conflicting with personal values</li>
-                        </ul>
-                        <p><span class="highlight">Example:</span> A doctor discovers that a patient has a terminal illness but the family requests that the doctor not inform the patient to prevent emotional distress. The doctor faces an ethical dilemma between respecting the family's wishes and the patient's right to know about their own health condition.</p>
+        </section>
+        
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <h2>Our Journey Together</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 2, 2023</div>
+                        <p>The beginning of our beautiful journey. The day our hearts found each other.</p>
                     </div>
                 </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Kohlberg's Model of Cognitive Moral Development</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Overview:</span> Lawrence Kohlberg's theory of moral development consists of three levels with two stages each, totaling six stages of moral reasoning.</p>
-                        <p><span class="highlight">Level 1: Pre-conventional Morality</span></p>
-                        <ul>
-                            <li><span class="highlight">Stage 1: Obedience and Punishment Orientation</span> - Individuals focus on avoiding punishment. They see rules as fixed and absolute.</li>
-                            <li><span class="highlight">Stage 2: Individualism and Exchange</span> - Individuals recognize that there is not just one right view. Different individuals have different viewpoints.</li>
-                        </ul>
-                        <p><span class="highlight">Level 2: Conventional Morality</span></p>
-                        <ul>
-                            <li><span class="highlight">Stage 3: Good Interpersonal Relationships</span> - The individual is good in order to be seen as a good person by others.</li>
-                            <li><span class="highlight">Stage 4: Maintaining the Social Order</span> - The individual becomes aware of the wider rules of society.</li>
-                        </ul>
-                        <p><span class="highlight">Level 3: Post-conventional Morality</span></p>
-                        <ul>
-                            <li><span class="highlight">Stage 5: Social Contract and Individual Rights</span> - The individual becomes aware that while rules/laws might exist for the good of the greatest number, there are times when they will work against the interest of particular individuals.</li>
-                            <li><span class="highlight">Stage 6: Universal Principles</span> - The individual has developed their own set of moral guidelines which may or may not fit the law.</li>
-                        </ul>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2023</div>
+                        <p>Our first month together, discovering the little things that make us smile.</p>
                     </div>
                 </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Sources of unethical behavior</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Sources of unethical behavior include:</span></p>
-                        <ul>
-                            <li><span class="highlight">Individual factors:</span>
-                                <ul>
-                                    <li>Lack of moral awareness or sensitivity</li>
-                                    <li>Moral disengagement (rationalizing unethical behavior)</li>
-                                    <li>Poor personal moral development</li>
-                                    <li>Self-interest and greed</li>
-                                </ul>
-                            </li>
-                            <li><span class="highlight">Organizational factors:</span>
-                                <ul>
-                                    <li>Unrealistic performance goals</li>
-                                    <li>Lack of ethical leadership</li>
-                                    <li>Poor organizational culture</li>
-                                    <li>Inadequate ethical policies and codes</li>
-                                </ul>
-                            </li>
-                            <li><span class="highlight">Societal factors:</span>
-                                <ul>
-                                    <li>Cultural norms that accept unethical behavior</li>
-                                    <li>Weak legal and regulatory frameworks</li>
-                                    <li>Social acceptance of certain unethical practices</li>
-                                    <li>Economic pressures</li>
-                                </ul>
-                            </li>
-                            <li><span class="highlight">Situational factors:</span>
-                                <ul>
-                                    <li>Opportunity to engage in unethical behavior</li>
-                                    <li>Group pressure</li>
-                                    <li>Time pressure</li>
-                                    <li>Ambiguity in ethical standards</li>
-                                </ul>
-                            </li>
-                        </ul>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2023</div>
+                        <p>Creating memories that will last a lifetime, one day at a time.</p>
                     </div>
                 </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Quality of Working Life</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> Quality of Working Life (QWL) refers to the favorableness or unfavorableness of a job environment for people. It is a comprehensive approach that considers various aspects of work that contribute to employee satisfaction, well-being, and effectiveness.</p>
-                        <p><span class="highlight">Key dimensions of QWL include:</span></p>
-                        <ul>
-                            <li>Adequate and fair compensation</li>
-                            <li>Safe and healthy working conditions</li>
-                            <li>Opportunity for growth and security</li>
-                            <li>Social integration in the work organization</li>
-                            <li>Constitutionalism in the work organization</li>
-                            <li>Work and total life space</li>
-                            <li>Social relevance of work</li>
-                        </ul>
-                        <p><span class="highlight">Benefits of improving QWL:</span></p>
-                        <ul>
-                            <li>Increased job satisfaction</li>
-                            <li>Higher productivity</li>
-                            <li>Reduced absenteeism and turnover</li>
-                            <li>Enhanced organizational commitment</li>
-                            <li>Better mental and physical health of employees</li>
-                        </ul>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2023</div>
+                        <p>Falling more in love with every conversation, every laugh, every moment.</p>
                     </div>
                 </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Ethics of Swami Vivekananda</div>
-                        <div class="marks">5 Marks</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2023</div>
+                        <p>Learning, growing, and building our beautiful story together.</p>
                     </div>
-                    <div class="answer">
-                        <p><span class="highlight">Overview:</span> Swami Vivekananda's ethics were deeply rooted in Vedanta philosophy and emphasized the divinity of human beings and service to humanity as service to God.</p>
-                        <p><span class="highlight">Key principles of Vivekananda's ethics:</span></p>
-                        <ul>
-                            <li><span class="highlight">Divinity of the soul:</span> He believed that every individual is divine and should be treated with respect and dignity.</li>
-                            <li><span class="highlight">Selfless service (Seva):</span> He emphasized serving others without expecting anything in return as the highest form of worship.</li>
-                            <li><span class="highlight">Truth and honesty:</span> He advocated for absolute truthfulness in thoughts, words, and actions.</li>
-                            <li><span class="highlight">Fearlessness:</span> He encouraged people to be fearless and stand up for righteousness.</li>
-                            <li><span class="highlight">Universal brotherhood:</span> He promoted the idea of universal brotherhood beyond caste, creed, and nationality.</li>
-                            <li><span class="highlight">Character building:</span> He emphasized the importance of building a strong character based on moral values.</li>
-                            <li><span class="highlight">Self-realization:</span> He believed that the ultimate goal of human life is self-realization, which requires ethical living.</li>
-                        </ul>
-                        <p><span class="highlight">Relevance today:</span> Vivekananda's ethical teachings continue to inspire people to lead a life of purpose, service, and moral integrity, making them relevant in contemporary business and personal contexts.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 2023</div>
+                        <p>Five months of love, laughter, and countless precious moments.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2, 2023</div>
+                        <p>Six months of loving you, and looking forward to forever with you.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="4-times" class="section">
-            <div class="section-header">
-                <div class="section-title">
-                    <i class="fas fa-star"></i>
-                    Questions Appeared 4 Times
-                </div>
-                <div class="frequency-badge">High Frequency</div>
+        <!-- Quotes Section -->
+        <section id="quotes">
+            <h2>Words That Express Our Love</h2>
+            <div class="quote-container">
+                <p class="quote-text">In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.</p>
+                <p class="quote-author">- Maya Angelou</p>
             </div>
-            <div class="section-content">
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Characteristics of moral standards</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Moral standards have the following key characteristics:</span></p>
-                        <ul>
-                            <li><span class="highlight">Universal applicability:</span> Moral standards are intended to apply to all persons in similar situations, regardless of personal preferences or cultural differences.</li>
-                            <li><span class="highlight">Based on rational considerations:</span> They are not based on mere feelings, desires, or preferences but on sound reasons and logical arguments.</li>
-                            <li><span class="highlight">Overriding importance:</span> Moral standards take precedence over other considerations, including self-interest, when determining what to do.</li>
-                            <li><span class="highlight">Not established by authority figures:</span> The validity of moral standards does not depend on whether they are endorsed by particular authorities or institutions.</li>
-                            <li><span class="highlight">Associated with special emotions:</span> When moral standards are violated, they typically evoke emotions like guilt, shame, and remorse.</li>
-                            <li><span class="highlight">Serve the public interest:</span> Moral standards are concerned with promoting the well-being of all affected parties, not just the individual.</li>
-                            <li><span class="highlight">Impartiality:</span> They require treating similar cases similarly and making decisions without favoritism or bias.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Law of Karma</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> The Law of Karma is a fundamental concept in Indian philosophy that states that every action has consequences. It is often described as the law of cause and effect, where actions (causes) create future consequences (effects).</p>
-                        <p><span class="highlight">Key aspects of the Law of Karma:</span></p>
-                        <ul>
-                            <li><span class="highlight">Cause and effect:</span> Every action, thought, or word produces an effect that will return to the doer.</li>
-                            <li><span class="highlight">Moral accountability:</span> Individuals are responsible for their actions and must face their consequences.</li>
-                            <li><span class="highlight">Cycle of rebirth:</span> Karma operates across lifetimes, influencing one's future incarnations.</li>
-                            <li><span class="highlight">Types of Karma:</span>
-                                <ul>
-                                    <li><span class="highlight">Sanchita Karma:</span> Accumulated karma from past actions</li>
-                                    <li><span class="highlight">Prarabdha Karma:</span> Portion of sanchita karma that is bearing fruit in the present life</li>
-                                    <li><span class="highlight">Agami Karma:</span> Karma being created in the present life that will bear fruit in the future</li>
-                                </ul>
-                            </li>
-                            <li><span class="highlight">Not deterministic:</span> While karma creates tendencies, it doesn't completely determine one's future; free will and conscious choices can modify karmic effects.</li>
-                            <li><span class="highlight">Ethical implications:</span> The law encourages ethical behavior by highlighting that good actions lead to positive consequences and harmful actions lead to suffering.</li>
-                        </ul>
-                        <p><span class="highlight">Relevance in ethics:</span> The Law of Karma provides a framework for understanding moral responsibility and encourages ethical behavior by emphasizing that actions have long-term consequences for the individual and society.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">White-collar crime</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> White-collar crime refers to non-violent crimes committed by business professionals, government officials, or individuals in positions of authority and trust, typically for financial gain.</p>
-                        <p><span class="highlight">Characteristics of white-collar crime:</span></p>
-                        <ul>
-                            <li>Committed by individuals in high social status or positions of trust</li>
-                            <li>Typically non-violent in nature</li>
-                            <li>Often involves deception, concealment, or breach of trust</li>
-                            <li>Usually financially motivated</li>
-                            <li>Can cause significant economic harm to individuals, organizations, or society</li>
-                        </ul>
-                        <p><span class="highlight">Examples of white-collar crime:</span></p>
-                        <ul>
-                            <li>Embezzlement - Misappropriation of assets entrusted to one's care</li>
-                            <li>Fraud - Deception for personal gain</li>
-                            <li>Insider trading - Using confidential information for stock market advantage</li>
-                            <li>Money laundering - Concealing the origins of illegally obtained money</li>
-                            <li>Bribery and corruption - Offering, giving, receiving, or soliciting something of value to influence actions</li>
-                            <li>Tax evasion - Illegal avoidance of paying taxes</li>
-                            <li>Cybercrime - Criminal activities carried out using computers or the internet</li>
-                        </ul>
-                        <p><span class="highlight">Ethical implications:</span> White-collar crimes violate trust, undermine economic systems, and harm society. They often involve abuse of power and position, making them particularly concerning from an ethical perspective.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Human values for Indian managers</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Essential human values for Indian managers:</span></p>
-                        <ul>
-                            <li><span class="highlight">Integrity:</span> Adherence to moral and ethical principles; honesty in all professional dealings.</li>
-                            <li><span class="highlight">Respect for individuals:</span> Valuing the dignity and worth of all employees, regardless of their position.</li>
-                            <li><span class="highlight">Compassion:</span> Understanding and empathizing with the challenges faced by employees and stakeholders.</li>
-                            <li><span class="highlight">Truthfulness (Satya):</span> Being truthful in communication and actions, even when difficult.</li>
-                            <li><span class="highlight">Self-discipline:</span> Maintaining control over one's actions, thoughts, and emotions.</li>
-                            <li><span class="highlight">Social responsibility:</span> Recognizing and fulfilling obligations to society and the environment.</li>
-                            <li><span class="highlight">Fairness and justice:</span> Making impartial decisions and treating all stakeholders equitably.</li>
-                            <li><span class="highlight">Service orientation:</span> Viewing management as a service to employees, customers, and society.</li>
-                            <li><span class="highlight">Non-violence (Ahimsa):</span> Avoiding harm to others through actions, words, or thoughts.</li>
-                            <li><span class="highlight">Stewardship:</span> Managing resources responsibly for future generations.</li>
-                        </ul>
-                        <p><span class="highlight">Indian philosophical foundations:</span> These values draw from ancient Indian wisdom traditions like Vedanta, Buddhism, and Jainism, which emphasize ethical conduct, self-realization, and harmonious living.</p>
-                        <p><span class="highlight">Contemporary relevance:</span> In the global business environment, Indian managers who embody these values can create ethical organizational cultures that balance profit with purpose and people.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Principles of professional ethics</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Key principles of professional ethics:</span></p>
-                        <ul>
-                            <li><span class="highlight">Integrity:</span> Being honest and truthful in all professional relationships and activities. Professionals should not be associated with misleading information.</li>
-                            <li><span class="highlight">Objectivity:</span> Professionals should not allow bias, conflict of interest, or undue influence of others to override professional judgments.</li>
-                            <li><span class="highlight">Professional competence and due care:</span> Professionals have a duty to maintain professional knowledge and skills at the required level and act diligently in accordance with applicable technical and professional standards.</li>
-                            <li><span class="highlight">Confidentiality:</span> Professionals should respect the confidentiality of information acquired during professional work and should not disclose such information to third parties without proper authority.</li>
-                            <li><span class="highlight">Professional behavior:</span> Professionals should comply with relevant laws and regulations and avoid any action that discredits the profession.</li>
-                            <li><span class="highlight">Transparency:</span> Being open and honest about professional processes, decisions, and actions.</li>
-                            <li><span class="highlight">Accountability:</span> Taking responsibility for professional decisions and actions.</li>
-                            <li><span class="highlight">Respect for rules and regulations:</span> Adhering to the laws, regulations, and standards that govern the profession.</li>
-                        </ul>
-                        <p><span class="highlight">Importance:</span> These principles provide a framework for ethical decision-making in professional contexts and help maintain public trust in various professions.</p>
-                    </div>
-                </div>
+            <div class="quote-container">
+                <p class="quote-text">I love you not only for what you are, but for what I am when I am with you.</p>
+                <p class="quote-author">- Roy Croft</p>
+            </div>
+            <div class="quote-container">
+                <p class="quote-text">You know you're in love when you can't fall asleep because reality is finally better than your dreams.</p>
+                <p class="quote-author">- Dr. Seuss</p>
+            </div>
+            <div class="quote-container">
+                <p class="quote-text">तुम मेरे दिल की धड़कन हो, मेरी सांसों का साथ हो, बस इतना ही काफी है, तुम मेरे लिए आखिरी हो।</p>
+                <p class="quote-author">- अज्ञात</p>
+            </div>
+            <div class="quote-container">
+                <p class="quote-text">मोहब्बत का इंतज़ाम तो खुदा ने किया होगा, वरना इतनी खूबसूरत तुम कहाँ से लाते।</p>
+                <p class="quote-author">- अज्ञात</p>
             </div>
         </section>
         
-        <section id="3-times" class="section">
-            <div class="section-header">
-                <div class="section-title">
-                    <i class="fas fa-star"></i>
-                    Questions Appeared 3 Times
+        <!-- Interactive Section -->
+        <section id="interactive" class="interactive-section">
+            <h2>Something Special For You</h2>
+            <div class="love-meter">
+                <h3>How Much I Love You</h3>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="loveMeter"></div>
+                    <div class="meter-text">Infinite</div>
                 </div>
-                <div class="frequency-badge">Medium-High Frequency</div>
             </div>
-            <div class="section-content">
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Define ethics</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> Ethics is the branch of philosophy that involves systematizing, defending, and recommending concepts of right and wrong conduct. It addresses questions about morality, such as what is morally good and bad, right and wrong.</p>
-                        <p><span class="highlight">Key aspects of ethics:</span></p>
-                        <ul>
-                            <li><span class="highlight">Normative dimension:</span> Ethics provides standards or norms for behavior that distinguish between right and wrong.</li>
-                            <li><span class="highlight">Systematic study:</span> It involves a structured examination of moral principles and values.</li>
-                            <li><span class="highlight">Practical application:</span> Ethics is concerned with real-world moral dilemmas and decision-making.</li>
-                            <li><span class="highlight">Rational justification:</span> Ethical principles require logical reasoning and justification.</li>
-                        </ul>
-                        <p><span class="highlight">Branches of ethics:</span></p>
-                        <ul>
-                            <li><span class="highlight">Meta-ethics:</span> Examines the nature of ethical properties and judgments.</li>
-                            <li><span class="highlight">Normative ethics:</span> Develops ethical theories and standards that determine right and wrong.</li>
-                            <li><span class="highlight">Applied ethics:</span> Addresses specific moral issues in practical contexts.</li>
-                        </ul>
-                        <p><span class="highlight">Importance:</span> Ethics provides frameworks for resolving moral conflicts, guides personal and professional conduct, and contributes to the functioning of a just society.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Differences: personal ethics vs professional ethics</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Personal Ethics:</span></p>
-                        <ul>
-                            <li>Refers to the moral principles and values that guide an individual's behavior in personal life</li>
-                            <li>Developed through family upbringing, education, personal experiences, and reflection</li>
-                            <li>More subjective and may vary significantly between individuals</li>
-                            <li>Not formally codified but may be influenced by religious, cultural, or philosophical beliefs</li>
-                            <li>Applies to personal relationships, individual decisions, and private conduct</li>
-                        </ul>
-                        <p><span class="highlight">Professional Ethics:</span></p>
-                        <ul>
-                            <li>Refers to the ethical standards and codes of conduct that govern behavior within a professional context</li>
-                            <li>Often formally codified in professional codes of ethics, regulations, or organizational policies</li>
-                            <li>More objective and standardized within a specific profession</li>
-                            <li>Developed by professional organizations, regulatory bodies, or employers</li>
-                            <li>Applies to professional relationships, workplace decisions, and business practices</li>
-                        </ul>
-                        <p><span class="highlight">Relationship between personal and professional ethics:</span></p>
-                        <ul>
-                            <li>Personal ethics form the foundation for professional ethics</li>
-                            <li>Conflicts may arise when personal ethics clash with professional requirements</li>
-                            <li>Professional ethics often extend or specify personal ethics in work contexts</li>
-                            <li>Both require integrity, honesty, and responsibility</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Moral philosophy</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> Moral philosophy, also known as ethics, is the branch of philosophy that explores the nature of moral judgments, moral principles, and moral problems. It seeks to understand the foundations of ethical behavior and the criteria for right and wrong actions.</p>
-                        <p><span class="highlight">Major approaches in moral philosophy:</span></p>
-                        <ul>
-                            <li><span class="highlight">Virtue Ethics:</span> Focuses on the character and virtues of the moral agent rather than on rules or consequences. Aristotle is a key proponent, emphasizing virtues like courage, temperance, and justice.</li>
-                            <li><span class="highlight">Deontological Ethics:</span> Emphasizes duty and rules in determining moral actions. Immanuel Kant's categorical imperative is a classic example, stating that actions should be based on principles that could be universally applied.</li>
-                            <li><span class="highlight">Consequentialism/Utilitarianism:</span> Judges actions based on their outcomes or consequences. Jeremy Bentham and John Stuart Mill advocated for the greatest happiness principle, which suggests that the right action maximizes overall happiness or utility.</li>
-                            <li><span class="highlight">Rights-based Ethics:</span> Centers on the rights of individuals and the moral obligations to respect those rights.</li>
-                            <li><span class="highlight">Contractarian Ethics:</span> Views moral principles as arising from a social contract or agreement among rational individuals.</li>
-                        </ul>
-                        <p><span class="highlight">Contemporary relevance:</span> Moral philosophy provides frameworks for addressing complex ethical issues in various fields, including business, medicine, technology, and public policy, helping individuals and societies navigate moral challenges.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Cross-holder conflict / holder conflict</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Definition:</span> Cross-holder conflict, also known as stakeholder conflict, occurs when the interests of different stakeholders in an organization are incompatible or in direct opposition. Stakeholders include any group or individual who can affect or is affected by the organization's objectives.</p>
-                        <p><span class="highlight">Types of stakeholders involved in conflicts:</span></p>
-                        <ul>
-                            <li><span class="highlight">Shareholders vs. Employees:</span> Shareholders may seek higher profits through cost-cutting, while employees want better wages and job security.</li>
-                            <li><span class="highlight">Management vs. Shareholders:</span> Managers might prioritize personal benefits or long-term growth, while shareholders may focus on short-term returns.</li>
-                            <li><span class="highlight">Company vs. Community:</span> Business operations might benefit the company but harm the local environment or community interests.</li>
-                            <li><span class="highlight">Customers vs. Shareholders:</span> Customers desire quality products at low prices, while shareholders seek maximum profit.</li>
-                            <li><span class="highlight">Suppliers vs. Company:</span> Suppliers want fair prices and prompt payments, while the company aims to minimize costs.</li>
-                        </ul>
-                        <p><span class="highlight">Ethical approaches to resolving stakeholder conflicts:</span></p>
-                        <ul>
-                            <li><span class="highlight">Stakeholder theory:</span> Recognizes the legitimate interests of all stakeholders and seeks balanced solutions.</li>
-                            <li><span class="highlight">Corporate Social Responsibility (CSR):</span> Encourages businesses to consider social and environmental impacts alongside economic goals.</li>
-                            <li><span class="highlight">Ethical decision-making frameworks:</span> Provide structured approaches to weigh competing interests and find fair resolutions.</li>
-                            <li><span class="highlight">Dialogue and negotiation:</span> Open communication between stakeholders to understand concerns and find mutually acceptable solutions.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Principles of personal ethics</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Key principles of personal ethics:</span></p>
-                        <ul>
-                            <li><span class="highlight">Honesty:</span> Being truthful in words and actions, not deceiving others, and maintaining sincerity in relationships.</li>
-                            <li><span class="highlight">Integrity:</span> Adhering to moral and ethical principles consistently, even when facing challenges or temptations.</li>
-                            <li><span class="highlight">Respect:</span> Treating others with dignity, valuing their perspectives, and acknowledging their rights and feelings.</li>
-                            <li><span class="highlight">Responsibility:</span> Accepting accountability for one's actions and decisions, and fulfilling obligations to oneself and others.</li>
-                            <li><span class="highlight">Fairness:</span> Making impartial decisions, treating others equitably, and considering all relevant perspectives.</li>
-                            <li><span class="highlight">Compassion:</span> Showing empathy and concern for others' well-being, and acting to alleviate suffering when possible.</li>
-                            <li><span class="highlight">Courage:</span> Standing up for one's principles and doing what is right, even in difficult circumstances.</li>
-                            <li><span class="highlight">Self-discipline:</span> Exercising control over one's impulses and emotions to act in accordance with ethical principles.</li>
-                            <li><span class="highlight">Humility:</span> Recognizing one's limitations, being open to learning, and avoiding arrogance.</li>
-                            <li><span class="highlight">Loyalty:</span> Being faithful to commitments, relationships, and principles that one has chosen to uphold.</li>
-                        </ul>
-                        <p><span class="highlight">Development of personal ethics:</span> These principles are typically shaped by family upbringing, education, cultural influences, religious beliefs, and personal reflection. They form the foundation for ethical decision-making in personal and professional contexts.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Indian ethical traditions</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Overview:</span> Indian ethical traditions are deeply rooted in ancient philosophical and religious systems that offer comprehensive frameworks for moral living and spiritual development.</p>
-                        <p><span class="highlight">Major Indian ethical traditions:</span></p>
-                        <ul>
-                            <li><span class="highlight">Vedic Ethics:</span> Based on the concept of Dharma (righteous duty), emphasizing truth (Satya), non-violence (Ahimsa), and self-discipline.</li>
-                            <li><span class="highlight">Buddhist Ethics:</span> Centered on the Eightfold Path, emphasizing right understanding, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right concentration.</li>
-                            <li><span class="highlight">Jain Ethics:</span> Focuses on non-violence (Ahimsa) in its most absolute form, truthfulness, non-stealing, chastity, and non-possession.</li>
-                            <li><span class="highlight">Sikh Ethics:</span> Emphasizes honest living, sharing with others, meditation on God's name, and service to humanity.</li>
-                            <li><span class="highlight">Islamic Ethics in India:</span> Based on principles of justice, compassion, honesty, and fulfillment of obligations.</li>
-                        </ul>
-                        <p><span class="highlight">Common themes in Indian ethical traditions:</span></p>
-                        <ul>
-                            <li>Emphasis on duty (Dharma) over rights</li>
-                            <li>Importance of self-control and discipline</li>
-                            <li>Non-violence and respect for all life</li>
-                            <li>Truthfulness and honesty</li>
-                            <li>Detachment from material possessions</li>
-                            <li>Service to others as a moral obligation</li>
-                            <li>Harmony between individual and cosmic order</li>
-                        </ul>
-                        <p><span class="highlight">Contemporary relevance:</span> These ethical traditions continue to influence Indian society and provide valuable insights for addressing modern ethical challenges in business, governance, and personal life.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Integrity, honesty, transparency in ethics</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Integrity in Ethics:</span></p>
-                        <ul>
-                            <li>Definition: Consistency between one's values, words, and actions</li>
-                            <li>Involves adherence to moral and ethical principles in all circumstances</li>
-                            <li>Requires moral courage to stand up for one's beliefs</li>
-                            <li>Creates trust and credibility in personal and professional relationships</li>
-                            <li>Example: A manager refusing to engage in corrupt practices despite pressure from superiors</li>
-                        </ul>
-                        <p><span class="highlight">Honesty in Ethics:</span></p>
-                        <ul>
-                            <li>Definition: Truthfulness in words and actions</li>
-                            <li>Involves not deceiving, misleading, or withholding relevant information</li>
-                            <li>Requires sincerity and authenticity in communication</li>
-                            <li>Fosters trust and open communication</li>
-                            <li>Example: An employee admitting a mistake rather than covering it up</li>
-                        </ul>
-                        <p><span class="highlight">Transparency in Ethics:</span></p>
-                        <ul>
-                            <li>Definition: Openness about processes, decisions, and actions</li>
-                            <li>Involves making information accessible and understandable</li>
-                            <li>Requires accountability for decisions and their consequences</li>
-                            <li>Promotes public trust and prevents corruption</li>
-                            <li>Example: A company publishing detailed reports about its environmental impact</li>
-                        </ul>
-                        <p><span class="highlight">Interrelationship:</span> These three values are interconnected and mutually reinforcing. Integrity provides the foundation for honesty, and both are enhanced through transparency. Together, they form the cornerstone of ethical behavior in personal and professional contexts.</p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Factors influencing ethical decision-making</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Individual factors:</span></p>
-                        <ul>
-                            <li>Moral development and cognitive moral reasoning</li>
-                            <li>Personal values and moral principles</li>
-                            <li>Age, gender, and education</li>
-                            <li>Personal integrity and character</li>
-                            <li>Religious and spiritual beliefs</li>
-                            <li>Life experiences and upbringing</li>
-                        </ul>
-                        <p><span class="highlight">Organizational factors:</span></p>
-                        <ul>
-                            <li>Organizational culture and ethical climate</li>
-                            <li>Leadership and management practices</li>
-                            <li>Codes of ethics and policies</li>
-                            <li>Reward systems and performance metrics</li>
-                            <li>Peer influence and group dynamics</li>
-                            <li>Opportunity to engage in unethical behavior</li>
-                        </ul>
-                        <p><span class="highlight">Societal factors:</span></p>
-                        <ul>
-                            <li>Cultural norms and values</li>
-                            <li>Legal and regulatory frameworks</li>
-                            <li>Economic conditions</li>
-                            <li>Social expectations and public opinion</li>
-                            <li>Media influence</li>
-                        </ul>
-                        <p><span class="highlight">Situational factors:</span></p>
-                        <ul>
-                            <li>Time pressure and decision urgency</li>
-                            <li>Complexity of the ethical issue</li>
-                            <li>Stakeholder interests and pressures</li>
-                            <li>Consequences of the decision</li>
-                            <li>Availability of information</li>
-                        </ul>
-                        <p><span class="highlight">Understanding these factors helps individuals and organizations create environments that support ethical decision-making and behavior.</span></p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Roots of unethical behavior</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Psychological roots:</span></p>
-                        <ul>
-                            <li>Moral disengagement - rationalizing unethical behavior</li>
-                            <li>Cognitive biases that distort ethical judgment</li>
-                            <li>Lack of empathy or concern for others</li>
-                            <li>Self-interest and egoism</li>
-                            <li>Moral blindness or lack of moral awareness</li>
-                        </ul>
-                        <p><span class="highlight">Organizational roots:</span></p>
-                        <ul>
-                            <li>Poor ethical leadership and role modeling</li>
-                            <li>Unrealistic performance goals and pressure</li>
-                            <li>Weak ethical culture and climate</li>
-                            <li>Inadequate ethical policies and enforcement</li>
-                            <li>Organizational structures that enable unethical behavior</li>
-                        </ul>
-                        <p><span class="highlight">Societal roots:</span></p>
-                        <ul>
-                            <li>Cultural norms that accept or encourage unethical behavior</li>
-                            <li>Weak legal and regulatory frameworks</li>
-                            <li>Economic systems that prioritize profit over ethics</li>
-                            <li>Social acceptance of certain unethical practices</li>
-                            <li>Lack of education about ethical principles</li>
-                        </ul>
-                        <p><span class="highlight">Situational roots:</span></p>
-                        <ul>
-                            <li>Opportunity to engage in unethical behavior</li>
-                            <li>Group pressure and conformity</li>
-                            <li>Time constraints and decision urgency</li>
-                            <li>Ambiguity in ethical standards</li>
-                            <li>Competition and market pressures</li>
-                        </ul>
-                        <p><span class="highlight">Addressing these roots requires a comprehensive approach involving individual moral development, organizational ethical systems, and societal ethical frameworks.</span></p>
-                    </div>
-                </div>
-                
-                <div class="question">
-                    <div class="question-header">
-                        <div class="question-title">Piaget's moral development theory</div>
-                        <div class="marks">5 Marks</div>
-                    </div>
-                    <div class="answer">
-                        <p><span class="highlight">Overview:</span> Jean Piaget's theory of moral development describes how children's moral reasoning evolves as they grow cognitively. He identified two main stages of moral development.</p>
-                        <p><span class="highlight">Stage 1: Heteronomous Morality (Approximately 4-7 years)</span></p>
-                        <ul>
-                            <li>Also called the "morality of constraint"</li>
-                            <li>Children view rules as fixed, absolute, and handed down by authorities</li>
-                            <li>Moral judgments are based on consequences rather than intentions</li>
-                            <li>Rules are seen as unchangeable and must be strictly obeyed</li>
-                            <li>Imminent justice is believed - wrongdoings will be naturally punished</li>
-                            <li>Egocentric perspective dominates moral reasoning</li>
-                        </ul>
-                        <p><span class="highlight">Stage 2: Autonomous Morality (Approximately 10+ years)</span></p>
-                        <ul>
-                            <li>Also called the "morality of cooperation"</li>
-                            <li>Children understand that rules are created by people
+            <button class="surprise-btn" onclick="revealSurprise()">Click For A Surprise</button>
+            <div class="surprise-message" id="surpriseMessage">
+                <h3>My Promise To You</h3>
+                <p>I promise to love you through every storm and every sunshine. I promise to hold your hand through every challenge and celebrate with you in every victory. I promise to make you laugh when you want to cry, to listen when you need to talk, and to be your rock when you need support. Most importantly, I promise to love you more with each passing day, for all the days of my life. You are my everything, my Tulsi, and I am so grateful for every moment we've shared and all the moments we have yet to create together.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">Made with <i class="fas fa-heart heart-icon"></i> by Aryan for Tulsi</p>
+        <p>Forever and Always</p>
+    </footer>
+    
+    <script>
+        // Generate floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '<i class="fas fa-heart"></i>';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = Math.random() * 3 + 5 + 's';
+            heart.style.opacity = Math.random();
+            heart.style.fontSize = Math.random() * 10 + 10 + 'px';
+            
+            document.getElementById('heartsContainer').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+        
+        // Create hearts periodically
+        setInterval(createHeart, 300);
+        
+        // Scroll to section
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Fill love meter on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loveMeter').style.width = '100%';
+            }, 1000);
+        });
+        
+        // Reveal surprise message
+        function revealSurprise() {
+            const surpriseMessage = document.getElementById('surpriseMessage');
+            surpriseMessage.style.display = 'block';
+            
+            // Create explosion of hearts
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+        }
+        
+        // Add some interactivity to gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Create hearts around the clicked image
+                for (let i = 0; i < 10; i++) {
+                    createHeart();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
