@@ -1,1 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Months of Love - Aryan & Tulsi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 49%, #fecfef 100%);
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated Background */
+        .hearts-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .heart {
+            position: absolute;
+            top: -50px;
+            color: rgba(255, 255, 255, 0.7);
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        
+        .date-anniversary {
+            background: rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.4);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff6b8b;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        /* Love Letter */
+        .love-letter {
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .love-letter::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 20px;
+            background: #ff6b8b;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .letter-content {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 100%;
+            background: #ff6b8b;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            width: 45%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: #ff6b8b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background: #ff6b8b;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -52.5px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -52.5px;
+        }
+        
+        /* Quotes */
+        .quote-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .quote-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .quote-text::before {
+            content: """;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: #ff6b8b;
+            font-family: serif;
+        }
+        
+        .quote-author {
+            text-align: right;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        /* Interactive Section */
+        .interactive-section {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .love-meter {
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        
+        .meter-bar {
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b8b, #ff9a9e);
+            width: 0%;
+            transition: width 2s ease;
+            border-radius: 15px;
+        }
+        
+        .meter-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .surprise-btn {
+            background: linear-gradient(45deg, #ff6b8b, #ff9a9e);
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .surprise-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .surprise-message {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+        
+        .footer-text {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .heart-icon {
+            color: #ff6b8b;
+            animation: pulse 1.5s infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: calc(100% - 60px);
+                left: 60px !important;
+            }
+            
+            .timeline-dot {
+                left: -50px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Header -->
+    <header>
+        <h1>Aryan & Tulsi</h1>
+        <p class="subtitle">A Journey of Love</p>
+        <div class="date-anniversary">June 2nd - December 2nd: 6 Months Together</div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <button class="nav-btn" onclick="scrollToSection('gallery')">Our Memories</button>
+        <button class="nav-btn" onclick="scrollToSection('letter')">Love Letter</button>
+        <button class="nav-btn" onclick="scrollToSection('timeline')">Our Journey</button>
+        <button class="nav-btn" onclick="scrollToSection('quotes')">Love Quotes</button>
+        <button class="nav-btn" onclick="scrollToSection('interactive')">For You</button>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Our Beautiful Moments</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/8864effc-9e1b-46d7-b398-a806a1555646.jpg?auth_key=1864692832-7d3dd8a155d3468a98f58342274205c3-0-a5ab7bdff5f63973885b6ee9ba2be21b" alt="Video call moment">
+                    <div class="gallery-caption">Our sweet conversations that light up my day</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/cc4b9613-caee-45dc-b5fd-b91ebdc66f8c.jpg?auth_key=1864692832-5d0511a0e8874a039b1660a406fb1303-0-78c0ef7bd6b1abb35260a042e4634236" alt="Tulsi in traditional attire">
+                    <div class="gallery-caption">My beautiful Tulsi, looking absolutely stunning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/fc75c37d-7b29-42a0-8c24-9ea5791a6867.jpg?auth_key=1864692832-169670ab6ffa465090e2a9fc2608e22f-0-669670f6c31941945e538c211b0a442d" alt="Another video call moment">
+                    <div class="gallery-caption">Every moment with you is precious</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/b6bf7315-e1c1-4bbb-a51b-7459c0d8762d.jpg?auth_key=1864692832-82f9f701ada944d094780f417ed47a71-0-ec4b6d9897cad84f6b9d2b7d2d0a41bf" alt="Late night conversation">
+                    <div class="gallery-caption">Late night talks that mean the world to me</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Love Letter Section -->
+        <section id="letter">
+            <h2>A Letter to My Love</h2>
+            <div class="love-letter">
+                <div class="letter-content">
+                    <p>My dearest Tulsi, my Chiku, my Tuli, my Baby,</p>
+                    <p>As I sit down to write these words, my heart is overflowing with emotions that words can barely capture. Six months ago, on June 2nd, our beautiful journey began, and every single day since has been a testament to the incredible love we share.</p>
+                    <p>Thank you for being the light in my life, the melody in my heart, and the peace in my soul. When I look at you, I see not just the woman I love, but my best friend, my confidant, and my greatest supporter. Your smile has the power to brighten my darkest days, and your laughter is the sweetest music I've ever heard.</p>
+                    <p>In these six months, you've taught me the true meaning of love. You've shown me that love isn't just about grand gestures, but about the small, everyday moments that we share. It's in the way you listen to my stories, the way you comfort me when I'm down, and the way you celebrate my victories as if they were your own.</p>
+                    <p>Thank you for your patience when I'm difficult, for your understanding when I make mistakes, and for your unwavering belief in us. You've made me a better person just by being in my life, and for that, I'll be eternally grateful.</p>
+                    <p>I love the way your eyes sparkle when you talk about things you're passionate about. I love the way you get excited about the little things. I love the way you care for others, and I especially love the way you care for me.</p>
+                    <p>Every moment with you feels like a beautiful dream that I never want to wake up from. You've filled my life with so much joy, laughter, and love that sometimes I wonder how I got so lucky to have you.</p>
+                    <p>As we celebrate these six months together, I want you to know that my love for you grows stronger with each passing day. I promise to cherish you, to support you, to make you laugh, and to be there for you through all of life's ups and downs.</p>
+                    <p>You are my today and all of my tomorrows. You are my forever.</p>
+                    <p>With all my love and all my heart,</p>
+                    <p>Your Aryan</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <h2>Our Journey Together</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 2, 2023</div>
+                        <p>The beginning of our beautiful journey. The day our hearts found each other.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2023</div>
+                        <p>Our first month together, discovering the little things that make us smile.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2023</div>
+                        <p>Creating memories that will last a lifetime, one day at a time.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2023</div>
+                        <p>Falling more in love with every conversation, every laugh, every moment.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">October 2023</div>
+                        <p>Learning, growing, and building our beautiful story together.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 2023</div>
+                        <p>Five months of love, laughter, and countless precious moments.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 2, 2023</div>
+                        <p>Six months of loving you, and looking forward to forever with you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quotes Section -->
+        <section id="quotes">
+            <h2>Words That Express Our Love</h2>
+            <div class="quote-container">
+                <p class="quote-text">I love how you make distance feel smaller with your words.
+
+Talking to you is the best part of my day.
+
+Even without meeting yet, you already feel like home to me.
+
+I can’t wait for the day we finally meet, but until then, I treasure every moment we share.
+Your smile brightens my day..</p>
+                <p class="quote-author">- Yar, have to sawar tara vagar nthi thati, ne rat tara vagar risay jay che🥹</p>
+            </div>
+            
+        </section>
+        
+        <!-- Interactive Section -->
+        <section id="interactive" class="interactive-section">
+            <h2>Something Special For You</h2>
+            <div class="love-meter">
+                <h3>How Much I Love You</h3>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="loveMeter"></div>
+                    <div class="meter-text">Infinite</div>
+                </div>
+            </div>
+            <button class="surprise-btn" onclick="revealSurprise()">Click For A Surprise</button>
+            <div class="surprise-message" id="surpriseMessage">
+                <h3>My Promise To You</h3>
+                <p>I promise to love you through every storm and every sunshine. I promise to hold your hand through every challenge and celebrate with you in every victory. I promise to make you laugh when you want to cry, to listen when you need to talk, and to be your rock when you need support. Most importantly, I promise to love you more with each passing day, for all the days of my life. You are my everything, my Tulsi, and I am so grateful for every moment we've shared and all the moments we have yet to create together.</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">Made with <i class="fas fa-heart heart-icon"></i> by Aryan for Tulsi</p>
+        <p>Forever and Always</p>
+    </footer>
+    
+    <script>
+        // Generate floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '<i class="fas fa-heart"></i>';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = Math.random() * 3 + 5 + 's';
+            heart.style.opacity = Math.random();
+            heart.style.fontSize = Math.random() * 10 + 10 + 'px';
+            
+            document.getElementById('heartsContainer').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+        
+        // Create hearts periodically
+        setInterval(createHeart, 300);
+        
+        // Scroll to section
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Fill love meter on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loveMeter').style.width = '100%';
+            }, 1000);
+        });
+        
+        // Reveal surprise message
+        function revealSurprise() {
+            const surpriseMessage = document.getElementById('surpriseMessage');
+            surpriseMessage.style.display = 'block';
+            
+            // Create explosion of hearts
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+        }
+        
+        // Add some interactivity to gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // Create hearts around the clicked image
+                for (let i = 0; i < 10; i++) {
+                    createHeart();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
 
